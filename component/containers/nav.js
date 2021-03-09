@@ -12,7 +12,7 @@ export default function Nav(){
         <Link href='/boy' name='Boy'/>
         <Link href='/girl' name='Girl'/>
         <Link href='/skincare' name='Skin Care'/>
-        <Link href='/signout' name='<img src="sign.png"></img>'/>
+        <Link href='/signout' name='hi'><img src="sign.png"></img></Link>
         <Link href='/cart' name='Cart'/>
         <img src='NTU.png' className={styles.nav}></img>
         </div>
