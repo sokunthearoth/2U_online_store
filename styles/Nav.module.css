@@ -1,13 +1,18 @@
 .L{
-    padding: 33px;
+    padding: 25px;
     float:right;
     padding-left:700px;
     position: relative;
+    z-index: 3;
 }
 .nav{
-    width: 170px;
+    width: 130px;
     float:left;
     position: absolute;
-    left:-10px;
-    top: -35px;
+    left:-120px;
+    top: -20px;
+    z-index: 4;
+}
+.icon{
+    width: 40px;
 }
