@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+.title{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+}
+.parallax {
+    background-image: url("./../public/image/cover.jpg");
+    margin-top: 120px;
+    min-height: 150px; 
+    width: 100%;
+    font-family: 'Bungee Shade', cursive;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax h1{
+    padding: 20px;
+    font-size: 45px;
+}
+.our_team img{
+    float: left;
+    width: 500px;
+    height: 700px;
+}
