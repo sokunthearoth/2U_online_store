@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .title{
     position: absolute;
     display: block;
@@ -6,24 +6,49 @@
     width: 100%;
     z-index: -1;
 }
-.parallax {
-    background-image: url("./../public/image/cover.jpg");
-    margin-top: 120px;
-    min-height: 150px; 
+.content{
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.our_mission{
+    margin: 80px;
+}
+.our_mission p{
+    margin: 30px;
+}
+.G_1:hover, .G_2:hover{
+    border: 0.3px solid slategrey;
+}
+.our_team{
+    display: inline-block;
+}
+.G_1, .G_2{
+    display: inline-block;
+    width: 40%;
+    margin: 15px;
+}
+.G_1 .pic, .G_2 .pic{
     width: 100%;
-    font-family: 'Bungee Shade', cursive;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: auto;
+    padding: 80px 80px 0px 80px;
+}
+.G_1 p, .G_2 p{
+    margin: 25px 45px;
+}
+.our_mission h2, .our_team h2{
+    text-transform: uppercase;
+}
+.socialIcon .img{
+    margin: 30px 15px;
+    width: 40px;
+}
+.socialIcon a .img{
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0px 1px 3px rgb(92, 92, 92);;
 
-}
-.parallax h1{
-    padding: 20px;
-    font-size: 45px;
-}
-.our_team img{
-    float: left;
-    width: 500px;
-    height: 700px;
 }

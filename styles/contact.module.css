@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+.contact{
+    width: 100%;
+    text-align: center;
+}
+.parallax {
+    background-image: url("./../public/image/cover.jpg");
+    margin-top: 120px;
+    min-height: 150px; 
+    width: 100%;
+    font-family: 'Monoton', cursive;
+    color: white;
+    text-transform: uppercase;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax h1{
+    padding: 50px;
+    font-size: 45px;
+}
+.content{
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; 
+}
+.info{
+    display: block;
+    margin: 70px 10px 10px 60px;
+    padding: 10px;
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+.form{
+    margin: 60px 10px;
+    display: inline-block;
+    width: 50%;
+}
+.form input[type=email],.form input[type=text], .form input[type=name], .form input[type=number], .form button[type=submit]{
+    margin: 10px 13px;
+    padding: 10px 25px;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.form input[type=text]{
+    height: 150px;
+}
+.form button[type=submit]{
+    color: white;
+    background-color: black;
+}
+
+.icon{
+    width: 13px;
+}
+.info p{
+    margin: 5px 5px;
+    padding: 15px;
+    font-size: 18px;
+    display: inline-block;
+}

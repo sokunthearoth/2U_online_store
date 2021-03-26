@@ -1,15 +1,13 @@
 import styles from './../styles/about.module.css'
-
+import ParallaxImage from '../component/presentations/parallax_image'
 
 export default function About(){
 
     return(
         <div className={styles.title}>
-            <div className={styles.parallax}>
-                <h1>ABOUT US</h1>
-            </div>
+            <ParallaxImage title="About us" />
             <div className={styles.content}>
-                <div>
+                <div className={styles.our_mission}>
                     <h2>Our Mission</h2>  
                     <p> Our mission is to
                         continually raise the bar of the customer
@@ -23,13 +21,22 @@ export default function About(){
                 </div>
                 <div className={styles.our_team}>
                     <h2>Our Team</h2>
-                    <div>
-                        <img src="reach.jpg"/>
-                        <p>My name is Reach,Im 15 years old and was born on May 5 2005, and im the owner and a Cambodian devolper of the company 2U and im also a studying student at the school "Sabai Code".</p>
+                    <div className={styles.G_1}>
+                        <img src="reach.jpg" className={styles.pic}/>
+                        <p>My name is Reach, I'm 15 years old and was born on May 5 2005, and I'm the owner and a Cambodian developer of the company 2U and I'm also a studying student at the school "Sabai Code".</p>
+                        <div className={styles.socialIcon}>
+                            <a href="https://web.facebook.com/profile.php?id=100008757060143"><img src="facebook.png" className={styles.img} /></a>
+                            <a href="https://web.facebook.com/messages/t/100008757060143"><img src="messenger.png" className={styles.img} /></a>
+                        </div>
                     </div>
-                    <div>
-                        <img src="Roth.jpeg" width="600px"/>
-                        <p>My name is Reach,Im 15 years old and was born on May 5 2005, and im the owner and a Cambodian devolper of the company 2U and im also a studying student at the school "Sabai Code".</p>
+                    <div className={styles.G_2}>
+                        <img src="Roth.jpeg" className={styles.pic}/>
+                        <p>My name is Roth, I'm 18 years old and study at high school in grade 12 , I'm the owner and a Cambodian developer of the company 2U and I'm also a studying student at the school "Sabai Code".</p>
+                        <div className={styles.socialIcon}>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="facebook.png" className={styles.img} /></a>
+                            <a href="https://web.facebook.com/messages/t/100031888552651"><img src="messenger.png" className={styles.img} /></a>
+                            <a href="/"><img src="instagram.png" className={styles.img} /></a>
+                        </div>         
                     </div>
                 </div>
             </div>

@@ -1,13 +1,36 @@
+
+.header{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 5;
+}
 .L{
-    padding: 33px;
-    float:right;
-    padding-left:700px;
+    top: 20px;
+    padding: 25px;
+    display: flex;
+    float: right;
     position: relative;
+    z-index: 3;
+    text-transform: uppercase;
 }
 .nav{
-    width: 170px;
-    float:left;
-    position: absolute;
-    left:-10px;
-    top: -35px;
+    width: 100px;
+    display: inline-block;
+    margin: 5px 10px 5px 40px;
+    z-index: 4;
+}
+.User{
+    width: 25px;
+    padding: 5px ;
+    margin: 0px 10px;
+    color: rgb(56, 56, 56);
+}
+.icon{
+    display: inline-block;
+    width: 30px;
+    padding: 5px ;
+    color: rgb(56, 56, 56);
+
 }
