@@ -49,6 +49,7 @@ export default function Home() {
             <div className={styles.paralax}>
             <p className={styles.p}>PRODUCT</p>
             </div>
+            <div id="root"></div>
         </div>
     )
 }

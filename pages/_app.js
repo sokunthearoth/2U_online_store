@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
   <>  
-  {router.pathname === '/' ? <div/> : <Nav/>}
+  {router.pathname === '/login'|| router.pathname === '/' ? <div/> : <Nav/>}
   <Head>
         <title>2U</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
