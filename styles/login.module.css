@@ -1,0 +1,74 @@
+.Register{
+    width: 100%;
+    height: 100%;
+    background-image: url(./../public/image/background.jpg);
+}
+/* .Register{
+
+} */
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-image: url(./../public/image/background.jpg);
+  }
+  .logo {
+    margin-top: 50px;
+    width: 200px;
+    border-radius: 50%;
+  }
+.li{
+  text-align: center;
+  color: black;
+  font-size: 50px;
+
+}
+.a{
+    background-color: grey;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .modalcontent {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 40%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .email, .password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+  .ln, .fn{
+    float: left;    width: 40%;
+    padding: 12px 20px;
+    margin: 25px 0;
+    box-sizing: border-box;
+  }
+  .ln{
+margin-left: 10%;
+  }
+  .fn{
+    margin-left: 5%;
+  }
+.tick{
+  float: left; margin-top: 5px;
+}
+.text{
+  margin-left: 25px;
+}

@@ -2,11 +2,12 @@ import '../styles/globals.css'
 import { useRouter } from 'next/router'
 import Nav from '../component/containers/nav'
 import Head from 'next/head'
+import Footer from '../component/containers/footer'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
   <>  
-  {router.pathname === '/' ? <div/> : <Nav/>}
+  {router.pathname === '/login'|| router.pathname === '/' ? <div/> : <Nav/>}
   <Head>
         <title>2U</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
   </Head>
   <Component {...pageProps} />
+  <Footer/>
   </>
   
   )

@@ -95,13 +95,13 @@ export default function Home() {
                     <Image src='product-image.jpg' title='Coat' price='25$'/>
                   </div>
                   <div>
-                    <Image src='product_for_men_watch.jpg' title='Clothe' price='25$'/>
+                    <Image src='product_for_men_watch.jpg' title='Shirt' price='25$'/>
                   </div>
                   <div>
                     <Image src='trouser.jpg' title='Throuser' price='8$'/>
                   </div>
                   <div>
-                    <Image src='product_for_men_T-shirt.jpg' title='Clothe' price='5$'/>
+                    <Image src='product_for_men_T-shirt.jpg' title='Shirt' price='25$'/>
                   </div>
                   <div>
                     <Image src='short.jpg' title='Short' price='15$'/>
@@ -118,7 +118,7 @@ export default function Home() {
               <div className={styles.carousel_men}>
                 <Carousel responsive={responsive}>
                   <div><Image src='set_clothe_women.jpg' title='Set_Shirt' price='15$'/></div>
-                  <div><Image src='product_for_women_hoodie_pink.jpg' title='Clothe' price='8$'/></div>
+                  <div><Image src='product_for_women_hoodie_pink.jpg' title='Shirt' price='10$'/></div>
                   <div><Image src='product_for_women_jean.jpg' title='Jean' price='18$'/></div>
                   <div><Image src='product_for_women_skirt.jpg' title='Skirt' price='15$'/></div>
                   <div><Image src='skirt.jpg' title='Skirt' price='15$'/></div>
@@ -169,10 +169,10 @@ export default function Home() {
                 </div>
                 <div className={styles.carousel_men}>
                   <Carousel responsive={responsive}>
-                    <div><Image src='product_SkinCare.jpg' title='T-shirt' price='5$'/></div>
-                    <div><Image src='skincare-set-dry.jpg' title='Watch' price='25$'/></div>
-                    <div><Image src='Skin_care.jpg' title='Shocks' price='5$'/></div>
-                    <div><Image src='Men_SkinCare.jpg' title='T-shirt' price='5$'/></div>
+                    <div><Image src='product_SkinCare.jpg' title='CLAM Skincare' price='15$'/></div>
+                    <div><Image src='skincare-set-dry.jpg' title='Bella Aura Skincare' price='20$'/></div>
+                    <div><Image src='Skin_care.jpg' title='Lightening Serum' price='25$'/></div>
+                    <div><Image src='Men_SkinCare.jpg' title='Best Face Mask' price='25$'/></div>
                   </Carousel>
                 </div>
               </div>

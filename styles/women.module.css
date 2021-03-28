@@ -1,8 +1,0 @@
-.product{
-    width: 60%;
-    overflow: hidden;
-}
-.product , .Image{
-    width: 20%;
-    display: inline-block;
-}
