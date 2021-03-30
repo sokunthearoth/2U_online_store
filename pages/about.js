@@ -35,7 +35,7 @@ export default function About(){
                         <div className={styles.socialIcon}>
                             <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="facebook.png" className={styles.img} /></a>
                             <a href="https://web.facebook.com/messages/t/100031888552651"><img src="messenger.png" className={styles.img} /></a>
-                            <a href="/"><img src="instagram.png" className={styles.img} /></a>
+                            <a href="https://www.instagram.com/__r_o_t_h__sokun/"><img src="instagram.png" className={styles.img} /></a>
                         </div>         
                     </div>
                 </div>
