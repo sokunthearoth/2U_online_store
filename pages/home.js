@@ -81,7 +81,7 @@ export default function Home() {
             <div className={styles.men}>
               <div className={styles.group}>
                 <img src="product_for_men.jpg"/>
-                <Button onclick='men' label='VIEW ALL'/>
+                <Button onclick="/men" label='VIEW ALL'/>
               </div>
               <div className={styles.carousel_men}>
                 <Carousel responsive={responsive}>
@@ -113,7 +113,7 @@ export default function Home() {
             <div className={styles.men}>
               <div className={styles.group}>
                 <img src="product_for_women.jpg"/>
-                <Button onclick="/men" label="VIEW ALL"/>
+                <Button onclick="/women" label="VIEW ALL"/>
               </div>
               <div className={styles.carousel_men}>
                 <Carousel responsive={responsive}>
@@ -132,7 +132,7 @@ export default function Home() {
               <div className={styles.men}>
                 <div className={styles.group}>
                   <img src="product_for_boy.jpg"/>
-                  <Button href="/men" label="VIEW ALL"/>
+                  <Button onclick="/boy" label="VIEW ALL"/>
                 </div>
                 <div className={styles.carousel_men}>
                   <Carousel responsive={responsive}>
@@ -148,7 +148,7 @@ export default function Home() {
               <div className={styles.men}>
                 <div className={styles.group}>
                   <img src="product_for_girl_clothes.jpg"/>
-                  <Button onclick="/men" label="VIEW ALL"/>
+                  <Button onclick="/girl" label="VIEW ALL"/>
                 </div>
                 <div className={styles.carousel_men}>
                   <Carousel responsive={responsive}>
@@ -165,7 +165,7 @@ export default function Home() {
               <div className={styles.men}>
                 <div className={styles.group}>
                   <img src="product_Men_SkinCare.jpg"/>
-                  <Button onclick = 'men' label="VIEW ALL"/>
+                  <Button onclick = "/skincare" label="VIEW ALL"/>
                 </div>
                 <div className={styles.carousel_men}>
                   <Carousel responsive={responsive}>

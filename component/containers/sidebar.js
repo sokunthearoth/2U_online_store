@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/sidebar.module.css'
+import { Router, useRouter } from 'next/router'
 
 export default function Sidebar() {
+  const router = useRouter()
   const [isopen, setOpen] = useState(false);
   const [open, set] = useState(false);
   const [t, f] = useState(false);
@@ -64,7 +66,7 @@ export default function Sidebar() {
   }
   return (
     <div>
-      <div className={styles.sidenav}>
+            <div className={styles.sidenav}>
         <p className={styles.title}>categories</p>
         <button onClick={handleOpenNavBar2} className={t === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Men<img style={style} src='/arrowred.png'></img></button>
         {
