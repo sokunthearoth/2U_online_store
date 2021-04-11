@@ -54,6 +54,7 @@
 .form button[type=submit]{
     color: white;
     background-color: black;
+    cursor: pointer;
 }
 
 .icon{

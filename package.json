@@ -21,7 +21,7 @@
     "react-dom": "17.0.1",
     "react-hook-form": "^6.15.5",
     "react-multi-carousel": "^2.6.2",
-    "react-toast-notification": "^1.1.4"
+    "react-toast-notifications": "^2.4.3"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0"

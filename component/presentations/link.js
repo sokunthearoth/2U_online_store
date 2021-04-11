@@ -13,7 +13,7 @@ export default function Link({children,href}) {
     router.push(href)
   }
   return (
-    <a href={href} onClick={handleClick} style={style} class="link">
+    <a href={href} onClick={handleClick} style={style} className="link">
       {children}
     </a>
   )

@@ -5,13 +5,13 @@ import { useRouter } from 'next/router'
 import {FormContext} from '../component/context/formcontext'
 
 const Register = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit} = useForm();
   const router = useRouter();
-  const {form, setForm} = useContext(FormContext)
+  const {form, setForm} = useContext(FormContext);
+
 
   const onSubmit = (data) => {
     setForm(data);
-    console.log(data)
     if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
       router.push('/login')
     } else {

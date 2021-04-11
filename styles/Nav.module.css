@@ -32,5 +32,10 @@
     width: 30px;
     padding: 5px ;
     color: rgb(56, 56, 56);
-
+    position: absolute;
+}
+.status{
+    position: relative;
+    color: red;
+    top:1px;
 }
