@@ -4,8 +4,226 @@ import Search from '../component/containers/search'
 import Sidebar from '../component/containers/sidebar'
 import styles from '../styles/style_page.module.css'
 import Sort from '../component/containers/sort'
-
-export default function Boy(){
+import { ProductContext } from './../component/contexts/ProductContext'
+import React, { useState, useEffect, useContext } from 'react';
+export default function Boy() {
+    const products = [
+        {
+            url: "hoddies.jpg",
+            name: "Plaid Shirt",
+            price: 10,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "jecket.jpg",
+            name: "Coat",
+            price: 30,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "product-image.jpg",
+            name: "Coat",
+            price: 25,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "product_for_men_watch.jpg",
+            name: "Shirt",
+            price: 25,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "trouser.jpg",
+            name: "Throuser",
+            price: 8,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "product_for_men_T-shirt.jpg",
+            name: "Shirt",
+            price: 10,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "short.jpg",
+            name: "Short",
+            price: 15,
+            gender: "MEN",
+            type: "new-in",
+        },
+        {
+            url: "set_clothe_women.jpg",
+            name: "Set_Shirt",
+            price: 15,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "product_for_women_hoodie_pink.jpg",
+            name: "Shirt",
+            price: 10,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "product_for_women_jean.jpg",
+            name: "Jean",
+            price: 18,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "product_for_women_skirt.jpg",
+            name: "Skirt",
+            price: 15,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "skirt.jpg",
+            name: "Skirt",
+            price: 15,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "yellow_dress.jpg",
+            name: "Dress",
+            price: 10,
+            gender: "WOMEN",
+            type: "new-in"
+        },
+        {
+            url: "brown_dress.jpg",
+            name: "Dress",
+            price: 15,
+            gender: "WOMEN",
+            type: "new-in",
+        },
+        {
+            url: "blue_dress.jpg",
+            name: "Dress",
+            price: 20,
+            gender: "WOMEN",
+            type: "new-in",
+        },
+        {
+            url: "product_for_boy_set_T-shirt.jpg",
+            name: "T-shirt",
+            price: 10,
+            gender: "BOY",
+            type: "new-in",
+        },
+        {
+            url: "product_for_boy_sport_T-shirt.jpg",
+            name: "T-shirt",
+            price: 10,
+            gender: "BOY",
+            type: "new-in",
+        },
+        {
+            url: "product_for_boy_trousers.jpg",
+            name: "Trouser",
+            price: 10,
+            gender: "BOY",
+            type: "new-in",
+        },
+        {
+            url: "product_for_boy_shocks.jpg",
+            name: "Plaid Shirt",
+            price: 10,
+            gender: "BOY",
+            type: "new-in",
+        },
+        {
+            url: "product_for_boy_shoes.jpg",
+            name: "Trouser",
+            price: 10,
+            gender: "BOY",
+            type: "new-in",
+        },
+        {
+            url: "product_for_girl_dress.jpg",
+            name: "Dress",
+            price: 15,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "product_for_girl_trouser.jpg",
+            name: "Trouser",
+            price: 8,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "product_for_girl_Orange_clothes.jpg",
+            name: "Set-Dress Kid",
+            price: 15,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "set_clothe.jpg",
+            name: "Set-Shirt",
+            price: 15,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "hoddies_girl.jpg",
+            name: "Hoddie",
+            price: 15,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "pink_hoodie_girl.jpg",
+            name: "Hoddie",
+            price: 10,
+            gender: "GIRL",
+            type: "new-in",
+        },
+        {
+            url: "product_SkinCare.jpg",
+            name: "CLAM Skincare",
+            price: 15,
+            gender: "SKIN-CARE",
+            type: "new-in",
+        },
+        {
+            url: " skincare-set-dry.jpg",
+            name: "Bella Aura Skincare",
+            price: 20,
+            gender: "SKIN-CARE",
+            type: "new-in",
+        },
+        {
+            url: "Skin_care.jpg",
+            name: "Lightening Serum",
+            price: 25,
+            gender: "SKIN-CARE",
+            type: "new-in",
+        },
+        {
+            url: "Men_SkinCare.jpg",
+            name: "Best Face Mask",
+            price: 25,
+            gender: "SKIN-CARE",
+            type: "new-in",
+        },
+    ]
+    const { cart, setcart } = useContext(ProductContext)
+    const addcart = (carts) => {
+        setcart(cart.concat(carts));
+        console.log(cart);
+    }
     return(
         <div>
             <ParallaxImage title="Boy" />
@@ -19,12 +237,12 @@ export default function Boy(){
                     </div>
                     <hr className={styles.hr}></hr>
                     <div className={styles.product}>
-                        <div className={styles.img}><Image src='product_for_boy_set_T-shirt.jpg' title='Hoodie' price='8$'/></div>
-                        <div className={styles.img}><Image src='product_for_boy_sport_T-shirt.jpg' title='T-Shirt' price='10$'/></div>
-                        <div className={styles.img}><Image src='product_for_boy_shocks.jpg' title='Plaid Shirt' price='10$'/></div>
-                        <div className={styles.img}><Image src='product_for_boy_trousers.jpg' title='Trouser' price='10$'/></div>
-                        <div className={styles.img}><Image src='product_for_boy_shoes.jpg' title='Trouser' price='12$'/></div>
-                        <div className={styles.img}><Image src='set-boy.jpg' title='Set-T-Shirt' price='15$'/></div>
+                    {products.filter(product => product.gender === "BOY").map((product,index) => {
+                            return (
+                                <div className={styles.img}><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                            )
+                        }
+                        )}
                     </div>
                 </div>
             </div>

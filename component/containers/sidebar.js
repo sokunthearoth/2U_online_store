@@ -72,7 +72,6 @@ export default function Sidebar() {
         {
           t === true ? (
             <div className={styles.dropdowncontainer}>
-              <a href="#">New In</a>
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
@@ -86,7 +85,6 @@ export default function Sidebar() {
         {
           o === true ? (
             <div className={styles.dropdowncontainer}>
-              <a href="#">New In</a>
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
@@ -100,7 +98,6 @@ export default function Sidebar() {
         {
           tru === true ? (
             <div className={styles.dropdowncontainer}>
-              <a href="#">New In</a>
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
@@ -114,9 +111,6 @@ export default function Sidebar() {
         {
           isopen === true ? (
             <div className={styles.dropdowncontainer}>
-
-
-              <a href="#">New In</a>
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
@@ -130,7 +124,8 @@ export default function Sidebar() {
         {
           open === true ? (
             <div className={styles.dropdowncontainer}>
-              <a href="#">New In</a>
+              <a href="#">Face-Mask</a>
+              <a href="#">Moisturizer</a>
             </div>
           ) :
             (<span></span>)
