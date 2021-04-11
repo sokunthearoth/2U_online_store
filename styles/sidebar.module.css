@@ -17,7 +17,7 @@
     overflow-x: hidden;
     padding-top: 20px;
     float: left;
-  }
+}
   
   .sidenav a, .dropdownbtn {
     padding: 6px 8px 6px 16px;
@@ -38,7 +38,7 @@
     background-color: white;
     padding-left: 8px;
     font-size: 2px;
-    margin-left: 10px;
+    margin-left: 35px;
   }
   .dropdownbtn1{
     padding: 6px 8px 6px 16px;
@@ -51,7 +51,6 @@
     width: 100%;
     text-align: left;
     cursor: pointer;
-    outline: none;
   }
 
   

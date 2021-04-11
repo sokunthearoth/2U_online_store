@@ -1,74 +1,72 @@
-.Register{
+
+.container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(./../public/image/background.jpg);
+  background-image: url(./../public/image/darkBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-
-.container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(./../public/image/background.jpg);
-  }
-  .logo {
-    margin-top: 50px;
-    width: 200px;
-    border-radius: 50%;
-  }
+.logo {
+position: absolute;
+background-color: white;
+margin-top: 25px;
+width: 130px;
+padding: 20px;
+border-radius: 50%;
+box-shadow: 0px 1px 5px rgb(92, 92, 92);;
+z-index: 1;
+}
 .li{
-  text-align: center;
-  color: black;
-  font-size: 50px;
+text-align: center;
+color: black;
+font-size: 25px;
+margin-top: 60px;
 
+}
+.info{
+width: 100%;
+margin-top: 30px;
+margin-bottom: 15px;
+}
+.info input{
+width: 45%;
+padding: 10px 25px;
+margin: 13px;
+border-radius: 5px;
+border: 1px solid grey;
+}
+.form input[type=email], .form input[type=password], .form input[type=submit]{
+margin: 10px 13px;
+padding: 10px 25px;
+width: 95%;
+border-radius: 5px;
+border: 1px solid grey;
 }
 .a{
-    background-color: grey;
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    width: 100%;
-  }
-  .modalcontent {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid #888;
-    width: 40%;
-    margin-top: 50px;
-    margin-bottom: 40px;
-  }
-  .email, .password {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    
-  }
-  .ln, .fn{
-    float: left;    width: 40%;
-    padding: 12px 20px;
-    margin: 25px 0;
-    box-sizing: border-box;
-  }
-  .ln{
-margin-left: 10%;
-  }
-  .fn{
-    margin-left: 5%;
-  }
+background-color: black;
+color: white;
+}
+.modalcontent {
+position: absolute;
+background-color: white;
+margin: auto;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0px 1px 5px rgb(92, 92, 92);;
+width: 40%;
+margin-top: 90px;
+margin-bottom: 40px;
+}
+.box{
+margin: 15px 30px;
+}
 .tick{
-  float: left; margin-top: 5px;
+float: left; 
+margin-top: 5px;
 }
 .text{
-  margin-left: 25px;
+margin-left: 25px;
 }

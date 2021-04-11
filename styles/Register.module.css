@@ -5,12 +5,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./../public/image/background.jpg);
+    background-image: url(./../public/image/darkBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .logo {
   position: absolute;
   background-color: white;
-  margin-top: 50px;
+  margin-top: 25px;
   width: 130px;
   padding: 20px;
   border-radius: 50%;
@@ -36,7 +38,7 @@
   border-radius: 5px;
   border: 1px solid grey;
 }
-.form input[type=email], .form input[type=password], .form button[type=submit]{
+.form input[type=email], .form input[type=password], .form input[type=submit]{
   margin: 10px 13px;
   padding: 10px 25px;
   width: 95%;
@@ -44,8 +46,8 @@
   border: 1px solid grey;
 }
 .a{
-  background-color: grey;
-  color: black;
+  background-color: black;
+  color: white;
 }
 .modalcontent {
   position: absolute;
@@ -53,9 +55,9 @@
   margin: auto;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 5px rgb(92, 92, 92);;
   width: 40%;
-  margin-top: 130px;
+  margin-top: 90px;
   margin-bottom: 40px;
 }
 .box{

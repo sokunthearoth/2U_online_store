@@ -1,31 +1,83 @@
+import React, {useContext} from "react";
+import { useForm } from "react-hook-form";
 import styles from '../styles/Register.module.css'
+import { useRouter } from 'next/router'
+import {FormContext} from '../component/context/formcontext'
 
-export default function Regiser() {
+const Register = () => {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const router = useRouter();
+  const {form, setForm} = useContext(FormContext)
+
+  const onSubmit = (data) => {
+    setForm(data);
+    console.log(data)
+    if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
+      router.push('/login')
+    } else {
+      alert("Passwords don't match");
+    }
+  }
+
   return (
     <div className={styles.container}>
-      <img src="image/logo.png" className={styles.logo} />
+      <img src="NTU.png" className={styles.logo} />
       <div className={styles.modalcontent}>
         <p className={styles.li} >Register</p>
-        <form className={styles.form} action="/" method="GET" >
+
+        <form className={styles.form} action="/" method="GET" onSubmit = {handleSubmit(onSubmit)} >
+
           <div className={styles.info}>
-            <input className={styles.fn} type="text" placeholder="First Name" />
-            <input className={styles.ln} type="text" placeholder="Last Name"  />
+            <input 
+              name="firstname" 
+              type="text" placeholder="First Name" 
+              ref={register({required:true})}
+            />
+
+            <input 
+              name="lastname" 
+              type="text" 
+              placeholder="Last Name" 
+              ref={register} 
+            />
           </div>
-          <input className={styles.email} type="email" placeholder="Email" id="email" />
+
+          <input 
+            name="email" 
+            type="email" 
+            placeholder="Email" 
+            id="email" 
+            ref={register({required:true})}
+          />
+
+          <input 
+            name="password" 
+            type="password" 
+            placeholder="Password" 
+            id="password" 
+            ref={register({required:true, minLength: 8, maxLength: 15})}
+          />
           <p className={styles.error}></p>
-          <input type="password" placeholder="Password" className={styles.password} id="password" />
+
+          <input 
+            name="confirm" 
+            type="password" placeholder="Confirm Password" 
+            id="confirm_password" 
+            ref={register({required:true, minLength: 8, maxLength: 15})}
+          />
           <p className={styles.error}></p>
-          <input type="password" placeholder="Confirm Password" className={styles.password} id="Confirm Password" />
-          <p className={styles.error}></p>
+
           <div className={styles.box}>
-            <input id="cb" type="checkbox" className={styles.tick} />
+            <input  id="cb" type="checkbox" className={styles.tick} ref={register({required:true})}/>
             <div className={styles.text}>
               I accept the Terms Of Use and Privacy Policy
             </div>
           </div>
-          <a href="/login" ><button className={styles.a} type="submit" id="submit" onsubmit="summit()">Register</button></a>
+          
+          <input type="submit" value="submit" className={styles.a} />
         </form>
       </div>
     </div>
   )
 }
+export default Register;

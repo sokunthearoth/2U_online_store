@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/sidebar.module.css'
 import { Router, useRouter } from 'next/router'
+import Link from '../presentations/link'
 
 export default function Sidebar() {
   const router = useRouter()
@@ -9,6 +10,26 @@ export default function Sidebar() {
   const [t, f] = useState(false);
   const [o, c] = useState(false);
   const [tru, fal] = useState(false);
+
+
+  const  [isClick, setIsClick] = useState(true);
+  useEffect(()=>{
+    if(isClick && router.pathname === "/men"){
+      f(true);
+    }
+    if(isClick && router.pathname === "/women"){
+      c(true);
+    }
+    if(isClick && router.pathname === "/boy"){
+      fal(true);
+    }
+    if(isClick && router.pathname === "/girl"){
+      setOpen(true);
+    }
+    if(isClick && router.pathname === "/skincare"){
+      set(true);
+    }
+  })
   const style = {
     width: 20,
     display: t === true ? 'inline' : 'none',
@@ -35,6 +56,7 @@ export default function Sidebar() {
     f(false);
     c(false);
     fal(false);
+    setIsClick(false);
   }
   const handleOpenNavBar1 = () => {
     set(!open);
@@ -42,6 +64,7 @@ export default function Sidebar() {
     f(false);
     c(false);
     fal(false);
+    setIsClick(false);
   }
   const handleOpenNavBar2 = () => {
     f(!t);
@@ -49,6 +72,7 @@ export default function Sidebar() {
     setOpen(false);
     c(false);
     fal(false);
+    setIsClick(false);
   }
   const handleOpenNavBar3 = () => {
     c(!o);
@@ -56,6 +80,7 @@ export default function Sidebar() {
     f(false);
     setOpen(false);
     fal(false);
+    setIsClick(false);
   }
   const handleOpenNavBar4 = () => {
     fal(!tru);
@@ -63,12 +88,16 @@ export default function Sidebar() {
     f(false);
     setOpen(false);
     c(false);
+    setIsClick(false);
   }
   return (
     <div>
-            <div className={styles.sidenav}>
+        <div className={styles.sidenav}>
         <p className={styles.title}>categories</p>
-        <button onClick={handleOpenNavBar2} className={t === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Men<img style={style} src='/arrowred.png'></img></button>
+        
+        <Link href='/men'>
+          <button onClick={handleOpenNavBar2} className={router.pathname === '/men'  ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Men<img style={style} src='/arrowred.png'></img></button>
+        </Link>
         {
           t === true ? (
             <div className={styles.dropdowncontainer}>
@@ -82,21 +111,24 @@ export default function Sidebar() {
           ) :
             (<span></span>)
         }
-        <button onClick={handleOpenNavBar3} className={o === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Women<img style={style1} src='/arrowred.png'></img></button>
+        <Link href='/women'>
+          <button onClick={handleOpenNavBar3} className={router.pathname === '/women'? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Women<img style={style1} src='/arrowred.png'></img></button>
+        </Link>
         {
           o === true ? (
             <div className={styles.dropdowncontainer}>
               <a href="#">New In</a>
               <a href="#">Shirts</a>
-              <a href="#">Socks</a>
-              <a href="#">Shoes</a>
-              <a href="#">Belts</a>
-              <a href="#">Watches</a>
+              <a href="#">Skirt</a>
+              <a href="#">Dress</a>
+              <a href="#">Cosmetics</a>
             </div>
           ) :
             (<span></span>)
         }
-        <button onClick={handleOpenNavBar4} className={tru === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Boy<img style={style4} src='/arrowred.png'></img></button>
+        <Link href='/boy' className={styles.sidenav}>
+          <button onClick={handleOpenNavBar4} className={router.pathname === '/boy' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Boy<img style={style4} src='/arrowred.png'></img></button>
+        </Link>
         {
           tru === true ? (
             <div className={styles.dropdowncontainer}>
@@ -104,29 +136,27 @@ export default function Sidebar() {
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
-              <a href="#">Belts</a>
-              <a href="#">Watches</a>
             </div>
           ) :
             (<span></span>)
         }
-        <button onClick={handleOpenNavBar} className={isopen === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Girl<img style={style3} src='/arrowred.png'></img></button>
+        <Link href='/girl'>
+          <button onClick={handleOpenNavBar} className={router.pathname === '/girl' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Girl<img style={style3} src='/arrowred.png'></img></button>
+        </Link>
         {
           isopen === true ? (
             <div className={styles.dropdowncontainer}>
-
-
               <a href="#">New In</a>
               <a href="#">Shirts</a>
               <a href="#">Socks</a>
               <a href="#">Shoes</a>
-              <a href="#">Belts</a>
-              <a href="#">Watches</a>
             </div>
           ) :
             (<span></span>)
         }
-        <button onClick={handleOpenNavBar1} className={open === true ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Skin Care<img style={style2} src='/arrowred.png'></img></button>
+        <Link href='/skincare'>
+          <button onClick={handleOpenNavBar1} className={router.pathname === '/skincare' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Skin Care<img style={style2} src='/arrowred.png'></img></button>
+        </Link>
         {
           open === true ? (
             <div className={styles.dropdowncontainer}>

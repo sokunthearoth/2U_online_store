@@ -11,14 +11,17 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "and": "0.0.3",
     "bootstrap": "^5.0.0-beta2",
+    "emailjs-com": "^2.6.4",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^1.5.1",
     "react-dom": "17.0.1",
     "react-hook-form": "^6.15.5",
-    "react-multi-carousel": "^2.6.2"
+    "react-multi-carousel": "^2.6.2",
+    "react-toast-notification": "^1.1.4"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0"
