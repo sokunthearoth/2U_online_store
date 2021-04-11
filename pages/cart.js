@@ -14,13 +14,13 @@ import { ProductContext } from './../component/contexts/ProductContext'
         console.log(cart);
       }  
       // function Order(){
-      //   setcart(cart === ({[]}))
-      // }
-      // const Total = 0
-      //   for(let i=0; i< cart.length; i++){
-      //       Total === Total + Number((cart[i].price));
-      //   }
-      console.log(Total);
+      // //   setcart(cart === ({[]}))
+      // // }
+      // // const Total = 0
+      // //   for(let i=0; i< cart.length; i++){
+      // //       Total === Total + Number((cart[i].price));
+      // //   }
+      // console.log(Total);
     return(
         <div>
             {cart.map((shop, index ) =>{
@@ -29,8 +29,8 @@ import { ProductContext } from './../component/contexts/ProductContext'
               );
             })
           }
-          <p>Your Total Price is {Total}</p> 
-          <button onClick={Order()} className={styles.button}>Order Now!</button>
+          {/* <p>Your Total Price is {Total}</p>  */}
+          {/* <button onClick={Order()} className={styles.button}>Order Now!</button> */}
         </div>
     )
 }
