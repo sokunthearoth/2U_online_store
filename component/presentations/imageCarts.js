@@ -1,4 +1,4 @@
-import styles from '../../styles/Images.module.css'
+import styles from '../../styles/images.module.css'
 // import ButtonIcon from './btn_icon'
 
 const Images = ({src, title, price,}) => {
