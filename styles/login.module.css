@@ -8,6 +8,7 @@
   background-image: url(./../public/image/darkBackground.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  text-align: center;
 }
 .logo {
 position: absolute;
@@ -38,12 +39,19 @@ margin: 13px;
 border-radius: 5px;
 border: 1px solid grey;
 }
-.form input[type=email], .form input[type=password], .form input[type=submit]{
+.form input[type=email], .form input[type=password]{
 margin: 10px 13px;
 padding: 10px 25px;
 width: 95%;
 border-radius: 5px;
 border: 1px solid grey;
+}
+.form input[type=submit]{
+  margin: 20px 13px;
+  padding: 10px 25px;
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid grey;
 }
 .a{
 background-color: black;

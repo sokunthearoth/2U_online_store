@@ -29,7 +29,7 @@ const Login = () => {
                         <p className={styles.error}></p>
                         <input type="password" placeholder="Password" name="password" id="password" ref={register({required:true})}/><br></br>
                         <p className={styles.error}></p>
-                        <Link href="/">Forget Password !</Link>
+                        <Link href="/">Forget Password ?</Link>
                         <input type="submit" value="submit" className={styles.a} />
                     </form>
                 </div>
