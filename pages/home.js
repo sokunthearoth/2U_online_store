@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 // import { Label } from 'react-bootstrap';
-import styles from './../styles/Home.module.css'
+import styles from './../styles/home.module.css'
 import Button from './../component/presentations/button'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
