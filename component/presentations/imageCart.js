@@ -2,7 +2,8 @@ import styles from '../../styles/image.module.css'
 // import ButtonIcon from './btn_icon'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye, faHeart, faShoppingBasket} from "@fortawesome/free-solid-svg-icons"
-
+// import {ToastProvider, useToasts} from 'react-toast-notifications';
+// const {addToast} = useToasts();
 const Image = ({src, title, price, onclick}) => {
     return(
         <div className={styles.Image}>

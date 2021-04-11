@@ -5,10 +5,12 @@ import Head from 'next/head'
 import Footer from '../component/containers/footer'
 import { ToastProvider } from 'react-toast-notifications';
 import { ProductContextProvider } from '../component/contexts/ProductContext'
+import { SelectContextProvider } from '../component/contexts/SelectContext'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <>
+    <SelectContextProvider>
       <ProductContextProvider>
         <ToastProvider>
           {router.pathname === '/login' || router.pathname === '/' ? <div /> : <Nav />}
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </ToastProvider>
       </ProductContextProvider>
+      </SelectContextProvider>
     </>
 
   )

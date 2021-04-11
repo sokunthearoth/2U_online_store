@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from '../../styles/sidebar.module.css'
 import { Router, useRouter } from 'next/router'
+import { SelectContext} from './../contexts/SelectContext'
 
 export default function Sidebar() {
   const router = useRouter()
+  const {select,setselect} = useContext(SelectContext)
   const [isopen, setOpen] = useState(false);
   const [open, set] = useState(false);
   const [t, f] = useState(false);
@@ -72,8 +74,8 @@ export default function Sidebar() {
         {
           t === true ? (
             <div className={styles.dropdowncontainer}>
-              <a href="#">Shirts</a>
-              <a href="#">Socks</a>
+              <a onClick={() => setselect('men_shirt')}>Shirts</a>
+              <a onClick={() => setselect('men_pant')}>Pants</a>
               <a href="#">Shoes</a>
               <a href="#">Belts</a>
               <a href="#">Watches</a>
