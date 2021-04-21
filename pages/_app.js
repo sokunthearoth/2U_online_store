@@ -6,10 +6,12 @@ import Footer from '../component/containers/footer'
 import { ToastProvider } from 'react-toast-notifications';
 import { ProductContextProvider } from '../component/contexts/ProductContext'
 import { SelectContextProvider } from '../component/contexts/SelectContext'
+import { SearchContextProvider } from '../component/contexts/SearchContext'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <>
+    <SearchContextProvider>
     <SelectContextProvider>
       <ProductContextProvider>
         <ToastProvider>
@@ -28,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       </ProductContextProvider>
       </SelectContextProvider>
+      </SearchContextProvider>
     </>
 
   )

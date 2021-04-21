@@ -21,11 +21,11 @@ import {ToastProvider, useToasts} from 'react-toast-notifications';
         })
         setcart([]);
       }
-      // // const Total = 0
-      // //   for(let i=0; i< cart.length; i++){
-      // //       Total === Total + Number((cart[i].price));
-      // //   }
-      // console.log(Total);
+      let Total = 0
+        for(let i=0; i< cart.length; i++){
+            Total = Total + Number((cart[i].price));
+        }
+      console.log(Total);
     return(
         <div>
           <ParallaxImage title="Your Cart" />
@@ -35,7 +35,7 @@ import {ToastProvider, useToasts} from 'react-toast-notifications';
               );
             })
           }
-          {/* <p>Your Total Price is {Total}</p>  */}
+          <p>Your Total Price is {Total}</p> 
           <button onClick={Order}>Order Now!</button>
         </div>
     )
