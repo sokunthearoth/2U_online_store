@@ -1,20 +1,12 @@
 import Link from '../presentations/link'
-import React, { useState } from 'react';
 import styles from './../../styles/Nav.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faShoppingBasket, faUser } from "@fortawesome/free-solid-svg-icons"
-import { ProductContext } from './../contexts/ProductContext'
+import { ProductContext } from '../contexts/ProductContext'
 import { useContext } from 'react'
-import Sidebar from './sidebar'
-import { Button } from 'bootstrap';
 
 export default function Nav() {
-    const { cart, setcart } = useContext(ProductContext)
-    const [isopen, setOpen] = useState(false);
-    const handleOpenNavBar = () => {
-        setOpen(!isopen);
-    }
-
+    const {cart, setcart} = useContext(ProductContext)
     return (
         <div className={styles.header}>
             <Link href='/home' className={styles.link}><img src='NTU.png' className={styles.nav}></img></Link>
@@ -33,18 +25,9 @@ export default function Nav() {
                     <Link href='/' ><FontAwesomeIcon icon={faUser} className={styles.User}></FontAwesomeIcon></Link>
                     <Link href='/cart'><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></Link>
                     <p className={styles.status}>{cart.length}</p>
-                    <button onClick={handleOpenNavBar}>
+                    <Link href="#">
                         <FontAwesomeIcon icon={faBars} className={styles.menu}></FontAwesomeIcon>
-                    </button>
-                    {
-                        isopen === true ? (
-                            <div className={styles.dropdowncontainer}>
-                                <Sidebar/>
-                                sljalkf
-                            </div>
-                        ) :
-                            (<span></span>)
-                    }
+                    </Link>
                 </div>
             </div>
         </div>
