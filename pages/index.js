@@ -5,10 +5,9 @@ import { useRouter } from 'next/router'
 import {FormContext} from '../component/context/formcontext'
 
 const Register = () => {
-  const { register, handleSubmit} = useForm();
+  const { register, handleSubmit, formState: { errors }} = useForm();
   const router = useRouter();
   const {form, setForm} = useContext(FormContext);
-
 
   const onSubmit = (data) => {
     setForm(data);
@@ -26,22 +25,13 @@ const Register = () => {
         <p className={styles.li} >Register</p>
 
         <form className={styles.form} action="/" method="GET" onSubmit = {handleSubmit(onSubmit)} >
-
-          <div className={styles.info}>
-            <input 
-              name="firstname" 
-              type="text" placeholder="First Name" 
-              ref={register({required:true})}
-            />
-
-            <input 
-              name="lastname" 
+          <input 
+              name="name" 
               type="text" 
-              placeholder="Last Name" 
-              ref={register} 
-            />
-          </div>
-
+              placeholder="Full Name" 
+              ref={register({required:true})}
+          />
+        {errors.name && <span className={styles.error}>This field is required</span>}
           <input 
             name="email" 
             type="email" 
@@ -49,7 +39,7 @@ const Register = () => {
             id="email" 
             ref={register({required:true})}
           />
-
+        {errors.email && <span className={styles.error}>This field is required</span>}
           <input 
             name="password" 
             type="password" 
@@ -57,24 +47,26 @@ const Register = () => {
             id="password" 
             ref={register({required:true, minLength: 8, maxLength: 15})}
           />
-          <p className={styles.error}></p>
+        {errors.password && <span className={styles.error}>This field is required</span>}
 
           <input 
             name="confirm" 
-            type="password" placeholder="Confirm Password" 
+            type="password" 
+            placeholder="Confirm Password" 
             id="confirm_password" 
             ref={register({required:true, minLength: 8, maxLength: 15})}
           />
-          <p className={styles.error}></p>
+          {errors.confirm && <span className={styles.error}>This field is required</span>}
 
           <div className={styles.box}>
-            <input  id="cb" type="checkbox" className={styles.tick} ref={register({required:true})}/>
+            <input  id="cb" name="check" type="checkbox" className={styles.tick} ref={register({required:true})}/>
             <div className={styles.text}>
               I accept the Terms Of Use and Privacy Policy
             </div>
+            {errors.check && <span className={styles.error}>This field is required</span>}
           </div>
           
-          <input type="submit" value="submit" className={styles.a} />
+          <input type="submit" value="REGISTER" className={styles.a} />
         </form>
       </div>
     </div>

@@ -1,12 +1,14 @@
 
 .header{
     background-color: white;
+    overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0px;
     z-index: 5;
 }
 .L{
+    box-sizing: border-box;
     top: 20px;
     padding: 25px;
     display: flex;
@@ -21,6 +23,11 @@
     margin: 5px 10px 5px 40px;
     z-index: 4;
 }
+.nav_icon{
+    width: 200px;
+    display: flex;
+    box-sizing: border-box;
+}
 .User{
     width: 25px;
     padding: 5px ;
@@ -28,14 +35,42 @@
     color: rgb(56, 56, 56);
 }
 .icon{
-    display: inline-block;
     width: 30px;
     padding: 5px ;
     color: rgb(56, 56, 56);
-    position: absolute;
+}
+.menu{
+    width: 28px;
+    padding: 5px ;
+    margin: 0px 10px;
+    color: rgb(56, 56, 56);
 }
 .status{
-    position: relative;
-    color: red;
-    top:1px;
+    position: absolute;
+    width: 20px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    top: 20px;
+    right: 120px;
 }
+.dropdowncontainer {
+    background-color: white;
+    padding-left: 5%;
+    font-size: 2px;
+    margin-left: 35px;
+  }
+  .dropdownbtn1{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: red;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }

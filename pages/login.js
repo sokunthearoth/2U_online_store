@@ -7,7 +7,7 @@ import Link from '../component/presentations/link'
 
 
 const Login = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,formState: { errors }} = useForm();
     const {form, setForm} = useContext(FormContext)
     const router = useRouter();
     const onSubmit = (data) => {
@@ -26,11 +26,11 @@ const Login = () => {
                     <p className={styles.li} >Login</p>
                     <form className={styles.form} action="/" method="GET" onSubmit = {handleSubmit(onSubmit)} >
                         <input name="email" type="email" placeholder="Email" id="email" ref={register({required:true})}/><br></br>
-                        <p className={styles.error}></p>
+                        {errors.email && <span className={styles.error}>This field is required</span>}
                         <input type="password" placeholder="Password" name="password" id="password" ref={register({required:true})}/><br></br>
-                        <p className={styles.error}></p>
+                        {errors.password && <span className={styles.error}>This field is required</span>}<br></br>
                         <Link href="/">Forget Password ?</Link>
-                        <input type="submit" value="submit" className={styles.a} />
+                        <input type="submit" value="LOGIN" className={styles.a} />
                     </form>
                 </div>
             </div>

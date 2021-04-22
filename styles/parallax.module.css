@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .parallax {
     background-image: url("./../public/image/cover.jpg");
-    margin-top: 100px;
     min-height: 150px; 
     width: 100%;
     font-family: 'Monoton', cursive;

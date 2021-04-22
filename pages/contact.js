@@ -44,7 +44,7 @@ export default function Contact(){
                 <form className="contact-form" onSubmit={sendEmail} className={styles.form}>
                     <input type="name" name="name" placeholder="Full Name"/>
                     <input type="email" name="email" placeholder="Email Address"/>
-                    <input type="number" name="Phone_Number" placeholder="Phone Number"/>
+                    <input type="name" name="Phone_Number" placeholder="Phone Number"/>
                     <input type="text" name="question" placeholder="Message"/>
                     <button type="submit">SUBMIT</button>
                 </form>
