@@ -80,6 +80,27 @@ export default function Men() {
                 type: "new-in",
             },
             {
+                url: "shoes4.jpg",
+                name: "Men Shoes",
+                price: 60,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "shoes5.jpg",
+                name: "Men Shoes",
+                price: 60,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "shoes6.jpg",
+                name: "Men Shoes",
+                price: 60,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
                 url: "shoes3.jpg",
                 name: "Men Shoes",
                 price: 60,
@@ -125,6 +146,7 @@ export default function Men() {
                 gender: "MEN",
                 type: "new-in",
             },
+            
         ],
         women_shirts: [
             {
@@ -204,6 +226,7 @@ export default function Men() {
                 gender: "WOMEN",
                 type: "new-in",
             }
+            
         ],
         boy_shirts: [
             {
@@ -356,7 +379,9 @@ export default function Men() {
         <div>
             <ParallaxImage title="men" />
             <div className={styles.product_girl}>
-                <Sidebar></Sidebar>
+                <div className={styles.sidebar}>
+                    <Sidebar></Sidebar>
+                </div>
                 <div className={styles.Girl}>
                     <div className={styles.Group}>
                         <Search onchange={handlesearch}></Search>

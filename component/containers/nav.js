@@ -3,10 +3,126 @@ import styles from './../../styles/Nav.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faShoppingBasket, faUser } from "@fortawesome/free-solid-svg-icons"
 import { ProductContext } from '../contexts/ProductContext'
-import { useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
+import { Router, useRouter } from 'next/router'
+import { SelectContext } from '../contexts/SelectContext'
+
 
 export default function Nav() {
-    const {cart, setcart} = useContext(ProductContext)
+    const { cart, setcart } = useContext(ProductContext)
+    const router = useRouter();
+    const {select,setselect} = useContext(SelectContext);
+    const [isopenclick, click] = useState(false);
+    const [isopen, setOpen] = useState(false);
+    const [open, set] = useState(false);
+    const [t, f] = useState(false);
+    const [o, c] = useState(false);
+    const [tru, fal] = useState(false);
+  
+  
+    const  [isClick, setIsClick] = useState(true);
+    useEffect(()=>{
+      if(isClick && router.pathname === "/men"){
+        f(true);
+        // setselect('men_shirt')
+      }
+      if(isClick && router.pathname === "/women"){
+        c(true);
+        // setselect('women_shirts')
+      }
+      if(isClick && router.pathname === "/boy"){
+        fal(true);
+        // setselect('boy_shirts')
+      }
+      if(isClick && router.pathname === "/girl"){
+        setOpen(true);
+        // setselect('girl_shirts')
+      }
+      if(isClick && router.pathname === "/skincare"){
+        set(true);
+        // setselect('skin_cares')
+      }
+    })
+    const styleopen={
+      color: 'red',
+      textDecoration: 'underline black'
+    }
+    const styleclose={
+      color: 'black',
+    }
+    const style = {
+      width: 20,
+      display: t === true ? 'inline' : 'inline',
+    }
+    const style4 = {
+      width: 20,
+      display: tru === true ? 'inline' : 'inline',
+    }
+    const style1 = {
+      width: 20,
+      display: o === true ? 'inline' : 'inline',
+    }
+    const style2 = {
+      width: 20,
+      display: open === true ? 'inline' : 'inline',
+    }
+    const style3 = {
+      width: 20,
+      display: isopen === true ? 'inline' : 'inline',
+    }
+    const handleOpen = () => {
+      click(!isopenclick);
+  }
+    const handleOpenNavBar = () => {
+      setOpen(!isopen);
+      set(false);
+      f(false);
+      c(false);
+      fal(false);
+      setIsClick(false);
+      setselect('girl_shirts')
+    }
+    const handleOpenNavBar1 = () => {
+      set(!open);
+      setOpen(false);
+      f(false);
+      c(false);
+      fal(false);
+      setIsClick(false);
+      setselect('skin_cares')
+    }
+    const handleOpenNavBar2 = () => {
+      f(!t);
+      set(false);
+      setOpen(false);
+      c(false);
+      setselect('men_shirt')
+      fal(false);
+      setIsClick(false);
+    }
+    const handleOpenNavBar3 = () => {
+      c(!o);
+      set(false);
+      f(false);
+      setOpen(false); 
+      setselect('women_shirts')
+      fal(false);
+      setIsClick(false);
+    }
+    const handleOpenNavBar4 = () => {
+      fal(!tru);
+      set(false);
+      f(false);
+      setOpen(false);
+      setselect('boy_shirts')
+      c(false);
+      setIsClick(false);
+    }
+
+
+
+
+
     return (
         <div className={styles.header}>
             <Link href='/home' className={styles.link}><img src='NTU.png' className={styles.nav}></img></Link>
@@ -25,11 +141,111 @@ export default function Nav() {
                     <Link href='/' ><FontAwesomeIcon icon={faUser} className={styles.User}></FontAwesomeIcon></Link>
                     <Link href='/cart'><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></Link>
                     <p className={styles.status}>{cart.length}</p>
-                    <Link href="#">
-                        <FontAwesomeIcon icon={faBars} className={styles.menu}></FontAwesomeIcon>
-                    </Link>
+                        <button onClick={handleOpen} className={styles.button}>
+                            <FontAwesomeIcon icon={faBars} className={styles.menu}></FontAwesomeIcon>
+                        </button>
                 </div>
             </div>
+            {
+                isopenclick === true ? (
+                    <div className={styles.dropdown}>
+                        <ul>
+                            <li><Link href='/home'>Home</Link></li>
+                            <li>
+                                <Link href='/men'>
+                                    <button onClick={handleOpenNavBar2} className={styles.link}>Men</button>
+                                </Link>
+                            </li>
+                            {
+                                t === true ? (
+                                    <div className={styles.dropdowncontainer}>
+                                        <ul>
+                                            <li><a onClick={() => setselect('men_shirt')} style={select === "men_shirt" ? (styleopen) : (styleclose)}>Shirts</a></li>
+                                            <li><a onClick={() => setselect('men_pants')} style={select === "men_pants" ? (styleopen) : (styleclose)}>Pants</a></li>
+                                            <li><a onClick={() => setselect('men_shoes')} style={select === "men_shoes" ? (styleopen) : (styleclose)}>Shoes</a></li>
+                                            <li><a onClick={() => setselect('men_belts')} style={select === "men_belts" ? (styleopen) : (styleclose)}>Belts</a></li>
+                                            <li><a onClick={() => setselect('men_watches')} style={select === "men_watches" ? (styleopen) : (styleclose)}>Watches</a></li>
+                                        </ul>
+                                    </div>
+                                ) :
+                                    (<span></span>)
+                            }
+                            <li>
+                                <Link href='/women'>
+                                    <button onClick={handleOpenNavBar3} className={styles.link}>Women</button>
+                                </Link>
+                            </li>
+                            {
+                                o === true ? (
+                                    <div className={styles.dropdowncontainer}>
+                                        <ul>
+                                            <li><a onClick={() => setselect('women_shirts')} style={select === "women_shirts" ? (styleopen) : (styleclose)}>Shirts</a></li>
+                                            <li><a onClick={() => setselect('women_skirts')} style={select === "women_skirts" ? (styleopen) : (styleclose)}>Skirts</a></li>
+                                            <li><a onClick={() => setselect('women_dresses')} style={select === "women_dresses" ? (styleopen) : (styleclose)}>Dresses</a></li>
+                                            <li><a onClick={() => setselect('women_cosmetics')} style={select === "women_cosmetics" ? (styleopen) : (styleclose)}>Cosmestics</a></li>
+                                        </ul>
+                                    </div>
+                                ) :
+                                    (<span></span>)
+                            }
+                            <li>
+                                <Link href='/boy' className={styles.sidenav}>
+                                    <button onClick={handleOpenNavBar4} className={styles.link}>Boy</button>
+                                </Link>
+                            </li>
+                            {
+                                tru === true ? (
+                                    <div className={styles.dropdowncontainer}>
+                                        <ul>
+                                            <li><a onClick={() => setselect('boy_shirts')} style={select === "boy_shirts" ? (styleopen) : (styleclose)}>Shirts</a></li>
+                                            <li><a onClick={() => setselect('boy_pants')} style={select === "boy_pants" ? (styleopen) : (styleclose)}>Pants</a></li>
+                                        </ul>
+                                    </div>
+                                ) :
+                                    (<span></span>)
+                            }
+                            <li>
+                                <Link href='/girl'>
+                                    <button onClick={handleOpenNavBar} className={styles.link}>Girl</button>
+                                </Link>
+                            </li>
+                            {
+                                isopen === true ? (
+                                    <div className={styles.dropdowncontainer}>
+                                        <ul>
+                                            <li><a onClick={() => setselect('girl_shirts')} style={select === "girl_shirts" ? (styleopen) : (styleclose)}>Shirts</a></li>
+                                            <li><a onClick={() => setselect('girl_pants')} style={select === "girl_pants" ? (styleopen) : (styleclose)}>Pants</a></li>
+                                        </ul>
+                                    </div>
+                                ) :
+                                    (<span></span>)
+                            }
+                            <li>
+                                <Link href='/skincare'>
+                                    <button onClick={handleOpenNavBar1} className={styles.link}>Skin Care</button>
+                                </Link>
+                            </li>
+                            {
+                                open === true ? (
+                                    <div className={styles.dropdowncontainer}>
+                                        <ul>
+                                            <li><a onClick={() => setselect('skin_cares')} style={select === "skin_cares" ? (styleopen) : (styleclose)}>New In</a></li>
+                                        </ul>
+                                    </div>
+                                ) :
+                                    (<span></span>)
+                            }
+                            <li>
+                                <Link href='/about' >About</Link>
+                            </li>
+                            <li>
+                                <Link href='/contact'>Contacts</Link>
+                            </li>
+                        </ul>
+                    </div>
+                ) : (<span></span>)
+            }
+
         </div>
     )
 }

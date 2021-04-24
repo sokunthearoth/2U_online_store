@@ -66,3 +66,25 @@
     font-size: 18px;
     display: inline-block;
 }
+@media screen and (max-width: 600px) {
+    .content{
+        width: 100%;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info{
+        width: 100%;
+        font-size: 12px;
+        margin: 10px auto;
+    }
+    .info p{
+        font-size: 13px;
+        margin: 0px 5px;
+    }
+    .form{
+        width: 100%;
+        margin: 0px auto;
+    }
+
+}

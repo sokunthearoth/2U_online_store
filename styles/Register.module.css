@@ -77,3 +77,14 @@
 .text{
   margin-left: 25px;
 }
+@media screen and (max-width: 600px) {
+  .text{
+    font-size: 13px;
+  }
+  .box{
+    margin: 15px;
+  }
+  .error{
+    font-size: 14px;
+  }
+}

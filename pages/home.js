@@ -238,16 +238,17 @@ export default function Home() {
       type: "new-in",
     },
   ]
-  const {cart,setcart}=useContext(ProductContext)
-    useEffect(() => {
-      document.title = `Home Page`;
-    });
-    const addcart = (carts) => {
-      setcart(cart.concat(carts));
-      console.log(cart);
-    }
-    return (
-      <div>
+  const { cart, setcart } = useContext(ProductContext)
+  useEffect(() => {
+    document.title = `Home Page`;
+  });
+  const addcart = (carts) => {
+    setcart(cart.concat(carts));
+    console.log(cart);
+  }
+  return (
+    <div>
+      <div className={styles.slider}>
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
           <ol className="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -274,98 +275,119 @@ export default function Home() {
             <span className="sr-only">Next</span>
           </a>
         </div>
-        <div className={styles.tb}>
-          <h2 className={styles.t1}>Welcome To 2U!</h2>
-          <p className={styles.t2}>At the 2U online shop we offer a variety of clothing and skin care products that came from our partnered brands from all over the world. In our store we have up to 30 products, items and more to come with the highest quality and shipping with our worldside global express. We value our customer very much so please enjoy your shopping trip at the 2U online store!</p>
-        </div>
-        <div className={styles.paralax}>
-          <p className={styles.p}>PRODUCT</p>
-        </div>
-        <div className={styles.product}>
-          <h2>MEN</h2>
-          <div className={styles.men}>
-            <div className={styles.group}>
-              <img src="product_for_men.jpg" />
-              <Button onclick="/men" label='VIEW ALL' />
-            </div>
-            <div className={styles.carousel_men}>
-              <Carousel responsive={responsive}>
-                {products.filter(product => product.gender === "MEN").map((product,index) => {
-                  return (
-                    <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
-                  );
-                }
-                )}
-              </Carousel>
-            </div>
-          </div>
-          <h2>WOMEN</h2>
-          <div className={styles.men}>
-            <div className={styles.group}>
-              <img src="product_for_women.jpg" />
-              <Button onclick="/women" label='VIEW ALL' />
-            </div>
-            <div className={styles.carousel_men}>
-              <Carousel responsive={responsive}>
-                {products.filter(product => product.gender === "WOMEN").map((product,index) => {
-                  return (
-                    <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
-                  );
-                }
-                )}
-              </Carousel>
-            </div>
-          </div>
-          <h2>BOY</h2>
-          <div className={styles.men}>
-            <div className={styles.group}>
-              <img src="product_for_boy.jpg" />
-              <Button onclick="/boy" label='VIEW ALL' />
-            </div>              <div className={styles.carousel_men}>
-              <Carousel responsive={responsive}>
-                {products.filter(product => product.gender === "BOY").map((product,index) => {
-                  return (
-                    <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
-                  );
-                }
-                )}
-              </Carousel>
-            </div>
-          </div>
-          <h2>GIRL</h2>
-          <div className={styles.men}>
-            <div className={styles.group}>
-              <img src="product_for_girl_clothes.jpg" />
-              <Button onclick="/girl" label='VIEW ALL' />
-            </div>              <div className={styles.carousel_men}>
-              <Carousel responsive={responsive}>
-                {products.filter(product => product.gender === "GIRL").map((product,index) => {
-                  return (
-                    <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
-                  );
-                }
-                )}
-              </Carousel>
-            </div>
-          </div>
-          <h2>SKIN CARE</h2>
-          <div className={styles.men}>
-            <div className={styles.group}>
-              <img src="product_Men_SkinCare.jpg" />
-              <Button onclick="/skincare" label='VIEW ALL' />
-            </div>              <div className={styles.carousel_men}>
-              <Carousel responsive={responsive}>
-                {products.filter(product => product.gender === "SKIN-CARE").map((product,index) => {
-                  return (
-                    <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
-                  );
-                }
-                )}
-              </Carousel>
-            </div>
-          </div>
-
-        </div>
       </div>
-    )
+
+      <div className={styles.tb}>
+        <h2 className={styles.t1}>Welcome To 2U!</h2>
+        <p className={styles.t2}>At the 2U online shop we offer a variety of clothing and skin care products that came from our partnered brands from all over the world. In our store we have up to 30 products, items and more to come with the highest quality and shipping with our worldside global express. We value our customer very much so please enjoy your shopping trip at the 2U online store!</p>
+      </div>
+      <div className={styles.paralax}>
+        <p className={styles.p}>PRODUCT</p>
+      </div>
+
+      <div className={styles.product}>
+        <h2>MEN</h2>
+        <div className={styles.men}>
+          <div className={styles.group}>
+            <img src="product_for_men.jpg" />
+            <Button onclick="/men" label='VIEW ALL' />
+          </div>
+          <div className={styles.carousel_men}>
+            <Carousel responsive={responsive}>
+              {products.filter(product => product.gender === "MEN").map((product, index) => {
+                return (
+                  <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                );
+              }
+              )}
+            </Carousel>
+            <div className={styles.btn}>
+              <Button onclick="/men" label='VIEW ALL'/>
+            </div>
+          </div>
+        </div>
+        <h2>WOMEN</h2>
+        <div className={styles.men}>
+          <div className={styles.group}>
+            <img src="product_for_women.jpg" />
+            <Button onclick="/women" label='VIEW ALL' />
+          </div>
+          <div className={styles.carousel_men}>
+            <Carousel responsive={responsive}>
+              {products.filter(product => product.gender === "WOMEN").map((product, index) => {
+                return (
+                  <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                );
+              }
+              )}
+            </Carousel>
+            <div className={styles.btn}>
+              <Button onclick="/women" label='VIEW ALL'/>
+            </div>
+          </div>
+        </div>
+        <h2>BOY</h2>
+        <div className={styles.men}>
+          <div className={styles.group}>
+            <img src="product_for_boy.jpg" />
+            <Button onclick="/boy" label='VIEW ALL' />
+          </div>
+          <div className={styles.carousel_men}>
+            <Carousel responsive={responsive}>
+              {products.filter(product => product.gender === "BOY").map((product, index) => {
+                return (
+                  <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                );
+              }
+              )}
+            </Carousel>
+          </div>
+          <div className={styles.btn}>
+              <Button onclick="/boy" label='VIEW ALL'/>
+          </div>
+        </div>
+        <h2>GIRL</h2>
+        <div className={styles.men}>
+          <div className={styles.group}>
+            <img src="product_for_girl_clothes.jpg" />
+            <Button onclick="/girl" label='VIEW ALL' />
+          </div>
+          <div className={styles.carousel_men}>
+            <Carousel responsive={responsive}>
+              {products.filter(product => product.gender === "GIRL").map((product, index) => {
+                return (
+                  <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                );
+              }
+              )}
+            </Carousel>
+          </div>
+          <div className={styles.btn}>
+              <Button onclick="/girl" label='VIEW ALL'/>
+          </div>
+        </div>
+        <h2>SKIN CARE</h2>
+        <div className={styles.men}>
+          <div className={styles.group}>
+            <img src="product_Men_SkinCare.jpg" />
+            <Button onclick="/skincare" label='VIEW ALL' />
+          </div>
+          <div className={styles.carousel_men}>
+            <Carousel responsive={responsive}>
+              {products.filter(product => product.gender === "SKIN-CARE").map((product, index) => {
+                return (
+                  <div><Image key={index} onclick={() => addcart(product)} src={product.url} title={product.name} price={product.price} /></div>
+                );
+              }
+              )}
+            </Carousel>
+          </div>
+          <div className={styles.btn}>
+              <Button onclick="/skincare" label='VIEW ALL'/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .parallax {
     background-image: url("./../public/image/cover.jpg");
-    min-height: 150px; 
+    margin-top: 115px;
     width: 100%;
     font-family: 'Monoton', cursive;
     color: white;
@@ -12,8 +12,16 @@
 
 }
 .parallax h1{
-    padding: 50px;
+    padding: 25px;
     text-align: center;
     text-transform: uppercase;
     font-size: 45px;
+}
+@media screen and (max-width: 600px) {
+    .parallax{
+        margin-top: 90px;
+    }
+    .parallax h1{
+        font-size: 18px;
+    }
 }

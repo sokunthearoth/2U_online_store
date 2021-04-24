@@ -144,6 +144,34 @@ export default function Women() {
                 gender: "WOMEN",
                 type: "new-in"
             },
+            {
+                url: "pink _shirt.jpg",
+                name: "Shirt",
+                price: 10,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "shirt 4.jpg",
+                name: "Shirt",
+                price: 10,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "product_for_women_hoodie_pink.jpg",
+                name: "Shirt",
+                price: 10,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "product_for_women_hoodie_pink.jpg",
+                name: "Shirt",
+                price: 10,
+                gender: "WOMEN",
+                type: "new-in"
+            },
         ],
         women_skirts: [
 
@@ -360,7 +388,9 @@ export default function Women() {
             <ParallaxImage title="women" />
             <div className={styles.product_girl}>
                 {/* <hr className={styles.hr}></hr> */}
-                <Sidebar></Sidebar>
+                <div className={styles.sidebar}>
+                    <Sidebar></Sidebar>
+                </div>
                 <div className={styles.Girl}>
                     <div className={styles.Group}>
                         <Search onchange={handlesearch}></Search>

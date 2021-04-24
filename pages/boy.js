@@ -355,7 +355,9 @@ export default function Boy() {
             <ParallaxImage title="Boy" />
             <div className={styles.product_girl}>
                 {/* <hr className={styles.hr}></hr> */}
-                <Sidebar></Sidebar>
+                <div className={styles.sidebar}>
+                    <Sidebar></Sidebar>
+                </div>
                 <div className={styles.Girl}>
                     <div className={styles.Group}>
                         <Search onchange={handlesearch}></Search>

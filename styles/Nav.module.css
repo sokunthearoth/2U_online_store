@@ -5,10 +5,12 @@
     position: fixed;
     width: 100%;
     top: 0px;
+    box-sizing: border-box;
     z-index: 5;
 }
 .L{
     box-sizing: border-box;
+    overflow: hidden;
     top: 20px;
     padding: 25px;
     display: flex;
@@ -42,7 +44,6 @@
 .menu{
     width: 28px;
     padding: 5px ;
-    margin: 0px 10px;
     color: rgb(56, 56, 56);
 }
 .status{
@@ -56,21 +57,126 @@
     top: 20px;
     right: 120px;
 }
-.dropdowncontainer {
-    background-color: white;
-    padding-left: 5%;
-    font-size: 2px;
-    margin-left: 35px;
-  }
-  .dropdownbtn1{
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: red;
-    display: block;
-    border: none;
-    background: none;
+.link{
     width: 100%;
+    overflow: unset;
     text-align: left;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.button{
+    width: 50px;
+    position: relative;
+    border: 0;
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    color: #333;
     cursor: pointer;
-  }
+    outline: 0;
+}
+.dropdown {
+  width: 100%;
+  z-index: 5;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.dropdown ul {
+  list-style: none;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dropdown li {
+    list-style: none;
+    padding: 5px 12px;
+}
+.button, .dropdown{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .L {
+        display: inline-flex;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* padding: 10px; */
+    }
+    .nav{
+        width: 60px;
+    }
+    .nav_link{
+        display: none;
+    }
+    .nav_icon{
+        margin: 0px;
+        display: block;
+        text-align: right;
+    }
+    .menu, .User{
+        width: 23px;
+        margin: 0px 5px;
+    }
+    .icon{
+        width: 28px;
+    }
+    .status{
+        width: 15px;
+        font-size: 11px;
+        top: 5px;
+        right: 70px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .L {
+        display: inline-flex;
+        box-sizing: border-box;
+        overflow: hidden;
+        top: 25px;
+        padding: 10px;
+    }
+    .nav{
+        width: 60px;
+        margin: 15px 10px 10px 10px;
+    }
+    .nav_link{
+        display: none;
+    }
+    .nav_icon{
+        margin: 0px;
+        display: block;
+        text-align: right;
+    }
+    .User{
+        width: 23px;
+        margin: 0px 5px;
+    }
+    .menu{
+        width: 25px;
+        margin: 0px 5px;
+    }
+    .icon{
+        width: 28px;
+    }
+    .status{
+        width: 15px;
+        font-size: 11px;
+        top: 5px;
+        right: 75px;
+    }
+    .dropdown{
+        display: block;
+    }
+    .button{
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+

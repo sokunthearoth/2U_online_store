@@ -33,7 +33,9 @@
     outline: none;
   }
   
-  
+  .img{
+    float: right;
+  }
   .dropdowncontainer {
     background-color: white;
     padding-left: 5%;

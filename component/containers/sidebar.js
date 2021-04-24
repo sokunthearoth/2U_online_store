@@ -3,10 +3,12 @@ import styles from '../../styles/sidebar.module.css'
 import { Router, useRouter } from 'next/router'
 import Link from '../presentations/Active_Link'
 import { SelectContext} from '../contexts/SelectContext'
+import { faAlignRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Sidebar() {
   const router = useRouter();
   const {select,setselect} = useContext(SelectContext);
+  const [isopenclick, click] = useState(false);
   const [isopen, setOpen] = useState(false);
   const [open, set] = useState(false);
   const [t, f] = useState(false);
@@ -17,19 +19,24 @@ export default function Sidebar() {
   const  [isClick, setIsClick] = useState(true);
   useEffect(()=>{
     if(isClick && router.pathname === "/men"){
-      f(true);
+      // f(true);
+      setselect('men_shirt')
     }
     if(isClick && router.pathname === "/women"){
-      c(true);
+      // c(true);
+      setselect('women_shirts')
     }
     if(isClick && router.pathname === "/boy"){
-      fal(true);
+      // fal(true);
+      setselect('boy_shirts')
     }
     if(isClick && router.pathname === "/girl"){
-      setOpen(true);
+      // setOpen(true);
+      setselect('girl_shirts')
     }
     if(isClick && router.pathname === "/skincare"){
-      set(true);
+      // set(true);
+      setselect('skin_cares')
     }
   })
   const styleopen={
@@ -41,24 +48,27 @@ export default function Sidebar() {
   }
   const style = {
     width: 20,
-    display: t === true ? 'inline' : 'none',
+    display: t === true ? 'inline' : 'inline',
   }
   const style4 = {
     width: 20,
-    display: tru === true ? 'inline' : 'none',
+    display: tru === true ? 'inline' : 'inline',
   }
   const style1 = {
     width: 20,
-    display: o === true ? 'inline' : 'none',
+    display: o === true ? 'inline' : 'inline',
   }
   const style2 = {
     width: 20,
-    display: open === true ? 'inline' : 'none',
+    display: open === true ? 'inline' : 'inline',
   }
   const style3 = {
     width: 20,
-    display: isopen === true ? 'inline' : 'none',
+    display: isopen === true ? 'inline' : 'inline',
   }
+  const handleOpen = () => {
+    click(!isopenclick);
+}
   const handleOpenNavBar = () => {
     setOpen(!isopen);
     set(false);
@@ -66,6 +76,7 @@ export default function Sidebar() {
     c(false);
     fal(false);
     setIsClick(false);
+    setselect('girl_shirts')
   }
   const handleOpenNavBar1 = () => {
     set(!open);
@@ -74,13 +85,14 @@ export default function Sidebar() {
     c(false);
     fal(false);
     setIsClick(false);
+    setselect('skin_cares')
   }
   const handleOpenNavBar2 = () => {
     f(!t);
     set(false);
     setOpen(false);
     c(false);
-    
+    setselect('men_shirt')
     fal(false);
     setIsClick(false);
   }
@@ -89,7 +101,7 @@ export default function Sidebar() {
     set(false);
     f(false);
     setOpen(false); 
-    
+    setselect('women_shirts')
     fal(false);
     setIsClick(false);
   }
@@ -98,6 +110,7 @@ export default function Sidebar() {
     set(false);
     f(false);
     setOpen(false);
+    setselect('boy_shirts')
     c(false);
     setIsClick(false);
   }
@@ -106,7 +119,7 @@ export default function Sidebar() {
         <div className={styles.sidenav}>
         <p className={styles.title}>categories</p>
         <Link href='/men'>
-          <button onClick={handleOpenNavBar2} className={router.pathname === '/men'  ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Men<img style={style} src='/arrowred.png'></img></button>
+          <button onClick={handleOpenNavBar2} className={router.pathname === '/men'  ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Men<img className={styles.img} style={style} src='/arrowred.png'></img></button>
         </Link>
         {
           t === true ? (
@@ -121,7 +134,7 @@ export default function Sidebar() {
             (<span></span>)
         }
         <Link href='/women'>
-          <button onClick={handleOpenNavBar3} className={router.pathname === '/women'? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Women<img style={style1} src='/arrowred.png'></img></button>
+          <button onClick={handleOpenNavBar3} className={router.pathname === '/women'? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Women<img className={styles.img} style={style1} src='/arrowred.png'></img></button>
         </Link>
         {
           o === true ? (
@@ -135,7 +148,7 @@ export default function Sidebar() {
             (<span></span>)
         }
         <Link href='/boy' className={styles.sidenav}>
-          <button onClick={handleOpenNavBar4} className={router.pathname === '/boy' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Boy<img style={style4} src='/arrowred.png'></img></button>
+          <button onClick={handleOpenNavBar4} className={router.pathname === '/boy' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Boy<img className={styles.img} style={style4} src='/arrowred.png'></img></button>
         </Link>
         {
           tru === true ? (
@@ -147,7 +160,7 @@ export default function Sidebar() {
             (<span></span>)
         }
         <Link href='/girl'>
-          <button onClick={handleOpenNavBar} className={router.pathname === '/girl' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Girl<img style={style3} src='/arrowred.png'></img></button>
+          <button onClick={handleOpenNavBar} className={router.pathname === '/girl' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Girl<img className={styles.img} style={style3} src='/arrowred.png'></img></button>
         </Link>
         {
           isopen === true ? (
@@ -159,7 +172,7 @@ export default function Sidebar() {
             (<span></span>)
         }
         <Link href='/skincare'>
-          <button onClick={handleOpenNavBar1} className={router.pathname === '/skincare' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Skin Care<img style={style2} src='/arrowred.png'></img></button>
+          <button onClick={handleOpenNavBar1} className={router.pathname === '/skincare' ? (styles.dropdownbtn1) : (styles.dropdownbtn)}>Skin Care<img className={styles.img} style={style2} src='/arrowred.png'></img></button>
         </Link>
         {
           open === true ? (
