@@ -12,7 +12,7 @@ import {ToastProvider, useToasts} from 'react-toast-notifications';
       console.log(cart)
       const addcart = (carts) => {
         setcart(cart.concat(carts));
-        console.log(cart);
+        console.log(cart.length);
       }  
       const Order = () => {
         addToast("Thank You! Your Order been placed", {
@@ -26,6 +26,7 @@ import {ToastProvider, useToasts} from 'react-toast-notifications';
             Total = Total + Number((cart[i].price));
         }
       console.log(Total);
+      console.log(cart);
     return(
         <div>
           <ParallaxImage title="Your Cart" />
@@ -35,8 +36,8 @@ import {ToastProvider, useToasts} from 'react-toast-notifications';
               );
             })
           }
-          <p>Your Total Price is {Total}</p> 
-          <button onClick={Order}>Order Now!</button>
+          {cart.length > 0 ? (<p>Your Total Price is {Total}</p>) : (<div></div>)  } 
+          {cart.length > 0 ? (<button onClick={Order}>Order Now!</button>) :  (<div></div>)}
         </div>
     )
 }
