@@ -145,7 +145,7 @@ export default function Women() {
                 type: "new-in"
             },
             {
-                url: "pink _shirt.jpg",
+                url: "blouses shirt.jpg",
                 name: "Shirt",
                 price: 10,
                 gender: "WOMEN",
@@ -159,14 +159,14 @@ export default function Women() {
                 type: "new-in"
             },
             {
-                url: "product_for_women_hoodie_pink.jpg",
+                url: "hodie.jpg",
                 name: "Shirt",
                 price: 10,
                 gender: "WOMEN",
                 type: "new-in"
             },
             {
-                url: "product_for_women_hoodie_pink.jpg",
+                url: "crop_top_hoodie.jpg",
                 name: "Shirt",
                 price: 10,
                 gender: "WOMEN",
@@ -176,21 +176,42 @@ export default function Women() {
         women_skirts: [
 
             {
-                url: "product_for_women_jean.jpg",
+                url: "skirt5.jpg",
                 name: "Jean",
                 price: 18,
                 gender: "WOMEN",
                 type: "new-in"
             },
             {
-                url: "product_for_women_skirt.jpg",
+                url: "skirt6.jpg",
                 name: "Skirt",
                 price: 15,
                 gender: "WOMEN",
                 type: "new-in"
             },
             {
-                url: "skirt.jpg",
+                url: "skirt1.jpg",
+                name: "Skirt",
+                price: 15,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "skirt2.jpg",
+                name: "Skirt",
+                price: 15,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "skirt3.jpg",
+                name: "Skirt",
+                price: 15,
+                gender: "WOMEN",
+                type: "new-in"
+            },
+            {
+                url: "skirt4.jpg",
                 name: "Skirt",
                 price: 15,
                 gender: "WOMEN",
@@ -219,22 +240,72 @@ export default function Women() {
                 gender: "WOMEN",
                 type: "new-in",
             },
+            {
+                url: "dress3.jpg",
+                name: "Dress",
+                price: 20,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+            {
+                url: "dress1.jpg",
+                name: "Dress",
+                price: 20,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+            {
+                url: "dress2.jpg",
+                name: "Dress",
+                price: 20,
+                gender: "WOMEN",
+                type: "new-in",
+            },
         ],
         women_comestics: [
             {
-                url: "comestics1.png",
+                url: "cosmestics1.jpg",
                 name: "Lipstick",
                 price: 20,
                 gender: "WOMEN",
                 type: "new-in",
             },
             {
-                url: "comestics2.png",
-                name: "Makeup",
+                url: "cosmestics2.png",
+                name: "Lipstick",
+                price: 10,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+            {
+                url: "cosmestics3.jpg",
+                name: "Contour Stick",
                 price: 20,
                 gender: "WOMEN",
                 type: "new-in",
-            }
+            },
+            {
+                url: "cosmestics4.jpg",
+                name: "Eyeshadow",
+                price: 18,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+            {
+                url: "cosmestics5.jpg",
+                name: "Contouring",
+                price: 15,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+            {
+                url: "cosmestics6.jpg",
+                name: "Eyeshadow",
+                price: 20,
+                gender: "WOMEN",
+                type: "new-in",
+            },
+
         ],
         boy_shirts: [
             {

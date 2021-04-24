@@ -33,7 +33,7 @@ export default function Men() {
                 type: "new-in",
             },
             {
-                url: "product_for_men_watch.jpg",
+                url: "product_for_men_T-shirt.jpg",
                 name: "Shirt",
                 price: 15,
                 gender: "MEN",
@@ -41,7 +41,7 @@ export default function Men() {
             },
 
             {
-                url: "product_for_men_T-shirt.jpg",
+                url: "man shirt2.jpg",
                 name: "Shirt",
                 price: 5,
                 gender: "MEN",
@@ -50,14 +50,42 @@ export default function Men() {
         ],
         men_pants: [
             {
-                url: "trouser.jpg",
+                url: "pants3.jpg",
                 name: "Throuser",
                 price: 8,
                 gender: "MEN",
                 type: "new-in",
             },
             {
-                url: "short.jpg",
+                url: "pants2.jpg",
+                name: "Short",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "pants8.jpg",
+                name: "Short",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "pants5.jpg",
+                name: "Short",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "pants6.jpg",
+                name: "Short",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "pants7.jpg",
                 name: "Short",
                 price: 15,
                 gender: "MEN",
@@ -118,6 +146,20 @@ export default function Men() {
             },
             {
                 url: "belts2.png",
+                name: "Men Belt",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "belts3.jpg",
+                name: "Men Belt",
+                price: 15,
+                gender: "MEN",
+                type: "new-in",
+            },
+            {
+                url: "belts4.jpg",
                 name: "Men Belt",
                 price: 15,
                 gender: "MEN",

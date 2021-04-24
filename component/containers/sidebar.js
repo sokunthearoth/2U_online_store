@@ -3,12 +3,10 @@ import styles from '../../styles/sidebar.module.css'
 import { Router, useRouter } from 'next/router'
 import Link from '../presentations/Active_Link'
 import { SelectContext} from '../contexts/SelectContext'
-import { faAlignRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Sidebar() {
   const router = useRouter();
   const {select,setselect} = useContext(SelectContext);
-  const [isopenclick, click] = useState(false);
   const [isopen, setOpen] = useState(false);
   const [open, set] = useState(false);
   const [t, f] = useState(false);
@@ -66,9 +64,7 @@ export default function Sidebar() {
     width: 20,
     display: isopen === true ? 'inline' : 'inline',
   }
-  const handleOpen = () => {
-    click(!isopenclick);
-}
+
   const handleOpenNavBar = () => {
     setOpen(!isopen);
     set(false);

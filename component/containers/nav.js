@@ -20,29 +20,6 @@ export default function Nav() {
     const [tru, fal] = useState(false);
   
   
-    const  [isClick, setIsClick] = useState(true);
-    useEffect(()=>{
-      if(isClick && router.pathname === "/men"){
-        f(true);
-        // setselect('men_shirt')
-      }
-      if(isClick && router.pathname === "/women"){
-        c(true);
-        // setselect('women_shirts')
-      }
-      if(isClick && router.pathname === "/boy"){
-        fal(true);
-        // setselect('boy_shirts')
-      }
-      if(isClick && router.pathname === "/girl"){
-        setOpen(true);
-        // setselect('girl_shirts')
-      }
-      if(isClick && router.pathname === "/skincare"){
-        set(true);
-        // setselect('skin_cares')
-      }
-    })
     const styleopen={
       color: 'red',
       textDecoration: 'underline black'
@@ -50,26 +27,7 @@ export default function Nav() {
     const styleclose={
       color: 'black',
     }
-    const style = {
-      width: 20,
-      display: t === true ? 'inline' : 'inline',
-    }
-    const style4 = {
-      width: 20,
-      display: tru === true ? 'inline' : 'inline',
-    }
-    const style1 = {
-      width: 20,
-      display: o === true ? 'inline' : 'inline',
-    }
-    const style2 = {
-      width: 20,
-      display: open === true ? 'inline' : 'inline',
-    }
-    const style3 = {
-      width: 20,
-      display: isopen === true ? 'inline' : 'inline',
-    }
+
     const handleOpen = () => {
       click(!isopenclick);
   }
@@ -79,7 +37,7 @@ export default function Nav() {
       f(false);
       c(false);
       fal(false);
-      setIsClick(false);
+    //   setIsClick(false);
       setselect('girl_shirts')
     }
     const handleOpenNavBar1 = () => {
@@ -88,7 +46,7 @@ export default function Nav() {
       f(false);
       c(false);
       fal(false);
-      setIsClick(false);
+    //   setIsClick(false);
       setselect('skin_cares')
     }
     const handleOpenNavBar2 = () => {
@@ -98,7 +56,7 @@ export default function Nav() {
       c(false);
       setselect('men_shirt')
       fal(false);
-      setIsClick(false);
+    //   setIsClick(false);
     }
     const handleOpenNavBar3 = () => {
       c(!o);
@@ -107,7 +65,7 @@ export default function Nav() {
       setOpen(false); 
       setselect('women_shirts')
       fal(false);
-      setIsClick(false);
+    //   setIsClick(false);
     }
     const handleOpenNavBar4 = () => {
       fal(!tru);
@@ -116,7 +74,7 @@ export default function Nav() {
       setOpen(false);
       setselect('boy_shirts')
       c(false);
-      setIsClick(false);
+    //   setIsClick(false);
     }
 
 
