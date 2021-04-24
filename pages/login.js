@@ -15,6 +15,8 @@ const Login = () => {
         console.log(form)
         if (form.email === data.email && form.password === data.password){
             router.push('/home')
+        }else{
+            alert("Your Email & Password don't match, Please, Check again!");
         }
 
     }

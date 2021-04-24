@@ -96,8 +96,8 @@
   .carousel_men{
     box-sizing: border-box;
     width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .btn{
     display: block;
