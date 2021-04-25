@@ -12,7 +12,7 @@ const Image = ({src, title, price, onclick}) => {
                 <div className={styles.button}>
                     <a onClick={onclick} ><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></a>
                     <a><FontAwesomeIcon icon={faHeart} className={styles.icon}></FontAwesomeIcon></a>
-                    <a ><FontAwesomeIcon icon={faEye} className={styles.icon}></FontAwesomeIcon></a>
+                    <a><FontAwesomeIcon icon={faEye} className={styles.icon}></FontAwesomeIcon></a>
                 </div>
             </div>
             <p className={styles.p_tile}>{title}</p>

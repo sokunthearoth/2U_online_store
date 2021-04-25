@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye, faHeart, faShoppingBasket} from "@fortawesome/free-solid-svg-icons"
 
 
+
 export default function ButtonIcon(props){
     return(
         <div className={styles.btn}>

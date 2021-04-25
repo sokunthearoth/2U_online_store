@@ -249,7 +249,7 @@ export default function Girl() {
         girl_shirts: [
             {
                 url: "girl shirt1.jpg",
-                name: "Black - hoodie kid",
+                name: "Black-hoodie kid",
                 price: 5,
                 gender: "GIRL",
                 type: "new-in",
