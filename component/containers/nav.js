@@ -38,7 +38,7 @@ export default function Nav() {
       c(false);
       fal(false);
     //   setIsClick(false);
-      setselect('girl_shirts')
+      setselect('girl_shirts');
     }
     const handleOpenNavBar1 = () => {
       set(!open);
@@ -47,15 +47,15 @@ export default function Nav() {
       c(false);
       fal(false);
     //   setIsClick(false);
-      setselect('skin_cares')
+      setselect('skin_cares');
     }
     const handleOpenNavBar2 = () => {
       f(!t);
       set(false);
       setOpen(false);
       c(false);
-      setselect('men_shirt')
       fal(false);
+      setselect('men_shirt');
     //   setIsClick(false);
     }
     const handleOpenNavBar3 = () => {
@@ -63,8 +63,8 @@ export default function Nav() {
       set(false);
       f(false);
       setOpen(false); 
-      setselect('women_shirts')
       fal(false);
+      setselect('women_shirts');
     //   setIsClick(false);
     }
     const handleOpenNavBar4 = () => {
@@ -72,8 +72,8 @@ export default function Nav() {
       set(false);
       f(false);
       setOpen(false);
-      setselect('boy_shirts')
       c(false);
+      setselect('boy_shirts');
     //   setIsClick(false);
     }
 
