@@ -12,6 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "and": "0.0.3",
+    "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta2",
     "emailjs-com": "^2.6.4",
     "next": "10.0.6",
@@ -21,6 +22,7 @@
     "react-dom": "17.0.1",
     "react-hook-form": "^6.15.5",
     "react-multi-carousel": "^2.6.2",
+    "react-native-axios": "^0.17.1",
     "react-toast-notifications": "^2.4.3"
   },
   "devDependencies": {
