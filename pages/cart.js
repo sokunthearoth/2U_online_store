@@ -35,7 +35,7 @@ const shop = () => {
       <div className={styles.cart}>
         {cart.map((shop, index) => {
           return (
-            <Images key={index} onclick={() => addcart(shop)} src={shop.url} title={shop.name} price={shop.price}  />
+            <Images key={index} onclick={() => addcart(shop)} src={shop.img_url} title={shop.name} price={shop.price}  />
           );
         })
         }

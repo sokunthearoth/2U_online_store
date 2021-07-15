@@ -33,49 +33,49 @@ export default function Nav() {
         click(!isopenclick);
     }
     const handleOpenNavBar = () => {
-        setOpen(!isopen);
-        set(false);
-        f(false);
-        c(false);
-        fal(false);
-        //   setIsClick(false);
-        setselect('girl_shirts')
+      setOpen(!isopen);
+      set(false);
+      f(false);
+      c(false);
+      fal(false);
+    //   setIsClick(false);
+      setselect('girl_shirts');
     }
     const handleOpenNavBar1 = () => {
-        set(!open);
-        setOpen(false);
-        f(false);
-        c(false);
-        fal(false);
-        //   setIsClick(false);
-        setselect('skin_cares')
+      set(!open);
+      setOpen(false);
+      f(false);
+      c(false);
+      fal(false);
+    //   setIsClick(false);
+      setselect('skin_cares');
     }
     const handleOpenNavBar2 = () => {
-        f(!t);
-        set(false);
-        setOpen(false);
-        c(false);
-        setselect('men_shirt')
-        fal(false);
-        //   setIsClick(false);
+      f(!t);
+      set(false);
+      setOpen(false);
+      c(false);
+      fal(false);
+      setselect('men_shirt');
+    //   setIsClick(false);
     }
     const handleOpenNavBar3 = () => {
-        c(!o);
-        set(false);
-        f(false);
-        setOpen(false);
-        setselect('women_shirts')
-        fal(false);
-        //   setIsClick(false);
+      c(!o);
+      set(false);
+      f(false);
+      setOpen(false); 
+      fal(false);
+      setselect('women_shirts');
+    //   setIsClick(false);
     }
     const handleOpenNavBar4 = () => {
-        fal(!tru);
-        set(false);
-        f(false);
-        setOpen(false);
-        setselect('boy_shirts')
-        c(false);
-        //   setIsClick(false);
+      fal(!tru);
+      set(false);
+      f(false);
+      setOpen(false);
+      c(false);
+      setselect('boy_shirts');
+    //   setIsClick(false);
     }
 
 
