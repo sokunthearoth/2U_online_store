@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import styles from '../styles/Register.module.css'
 import { useRouter } from 'next/router'
 import {FormContext} from '../component/context/formcontext'
+import Link from '../component/presentations/link'
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors }} = useForm();
@@ -12,7 +13,7 @@ const Register = () => {
   const onSubmit = (data) => {
     setForm(data);
     if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
-      router.push('/login')
+      router.push('/information')
     } else {
       setMessage(`Passwords don't match`);
       
@@ -57,7 +58,7 @@ const Register = () => {
             id="confirm_password" 
             ref={register({required:true, minLength: 8, maxLength: 15})}
           />
-         <span className={styles.error}>{message}</span>
+         {errors.confirm && <span className={styles.error}>Password must between 8 to 15 digits.</span>}
 
           <div className={styles.box}>
             <input  id="cb" name="check" type="checkbox" className={styles.tick} ref={register({required:true})}/>
@@ -67,7 +68,10 @@ const Register = () => {
             {errors.check && <span className={styles.error}>This field is required</span>}
           </div>
           
-          <input type="submit" value="REGISTER" className={styles.a} />
+          <input type="submit" value="REGISTER" className={styles.a} /> <br></br><br></br>
+
+          <p className={styles.p}>Already have an account? <Link href='/login'><b className={styles.link}>Login</b></Link></p>
+
         </form>
       </div>
     </div>
