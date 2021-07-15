@@ -3,18 +3,20 @@ import { useForm } from "react-hook-form";
 import styles from '../styles/Register.module.css'
 import { useRouter } from 'next/router'
 import {FormContext} from '../component/context/formcontext'
+import Link from '../component/presentations/link'
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors }} = useForm();
   const router = useRouter();
   const {form, setForm} = useContext(FormContext);
-
+  const [message,setMessage]=React.useState(``)
   const onSubmit = (data) => {
     setForm(data);
     if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
-      router.push('/login')
+      router.push('/information')
     } else {
-      alert("Passwords don't match");
+      setMessage(`Passwords don't match`);
+      
     }
   }
 
@@ -39,7 +41,7 @@ const Register = () => {
             id="email" 
             ref={register({required:true})}
           />
-        {errors.email && <span className={styles.error}>This field is required</span>}
+        {errors.email && <span className={styles.error}>This field is required </span>}
           <input 
             name="password" 
             type="password" 
@@ -47,8 +49,8 @@ const Register = () => {
             id="password" 
             ref={register({required:true, minLength: 8, maxLength: 15})}
           />
-        {errors.password && <span className={styles.error}>This field is required</span>}
-
+        {errors.password && <span className={styles.error}>Password must between 8 to 15 digits.</span>}
+       
           <input 
             name="confirm" 
             type="password" 
@@ -56,7 +58,7 @@ const Register = () => {
             id="confirm_password" 
             ref={register({required:true, minLength: 8, maxLength: 15})}
           />
-          {errors.confirm && <span className={styles.error}>This field is required</span>}
+         {errors.confirm && <span className={styles.error}>Password must between 8 to 15 digits.</span>}
 
           <div className={styles.box}>
             <input  id="cb" name="check" type="checkbox" className={styles.tick} ref={register({required:true})}/>
@@ -66,7 +68,10 @@ const Register = () => {
             {errors.check && <span className={styles.error}>This field is required</span>}
           </div>
           
-          <input type="submit" value="REGISTER" className={styles.a} />
+          <input type="submit" value="REGISTER" className={styles.a} /> <br></br><br></br>
+
+          <p className={styles.p}>Already have an account? <Link href='/login'><b className={styles.link}>Login</b></Link></p>
+
         </form>
       </div>
     </div>

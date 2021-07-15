@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
           <SelectContextProvider>
             <ProductContextProvider>
               <ToastProvider>
-                {router.pathname === '/login' || router.pathname === '/' ? <div /> : <Nav />}
+                {router.pathname === '/login' || router.pathname === '/' || router.pathname === '/information' || router.pathname === '/information_seller' || router.pathname === '/set_profile' ? <div /> : <Nav />}
                 <Head>
                   <title>2U</title>
                   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 </Head>
                 <Component {...pageProps} />
-                {router.pathname === '/login' || router.pathname === '/' ? <div /> : <Footer />}
+                {router.pathname === '/login' || router.pathname === '/' || router.pathname === '/information' || router.pathname === '/information_seller' || router.pathname === '/set_profile' ? <div /> : <Footer />}
               </ToastProvider>
             </ProductContextProvider>
           </SelectContextProvider>

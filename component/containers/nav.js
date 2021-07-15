@@ -1,80 +1,81 @@
 import Link from '../presentations/link'
 import styles from './../../styles/Nav.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faShoppingBasket, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faBell, faShoppingBasket, faUser } from "@fortawesome/free-solid-svg-icons"
 import { ProductContext } from '../contexts/ProductContext'
 import React, { useState, useEffect, useContext } from 'react';
 import { Router, useRouter } from 'next/router'
 import { SelectContext } from '../contexts/SelectContext'
+import Image from 'next/image'
 
 
 export default function Nav() {
     const { cart, setcart } = useContext(ProductContext)
     const router = useRouter();
-    const {select,setselect} = useContext(SelectContext);
+    const { select, setselect } = useContext(SelectContext);
     const [isopenclick, click] = useState(false);
     const [isopen, setOpen] = useState(false);
     const [open, set] = useState(false);
     const [t, f] = useState(false);
     const [o, c] = useState(false);
     const [tru, fal] = useState(false);
-  
-  
-    const styleopen={
-      color: 'red',
-      textDecoration: 'underline black'
+
+
+    const styleopen = {
+        color: 'red',
+        textDecoration: 'underline black'
     }
-    const styleclose={
-      color: 'black',
+    const styleclose = {
+        color: 'black',
     }
 
     const handleOpen = () => {
-      click(!isopenclick);
-  }
+        click(!isopenclick);
+    }
     const handleOpenNavBar = () => {
-      setOpen(!isopen);
-      set(false);
-      f(false);
-      c(false);
-      fal(false);
-    //   setIsClick(false);
-      setselect('girl_shirts')
+        setOpen(!isopen);
+        set(false);
+        f(false);
+        c(false);
+        fal(false);
+        //   setIsClick(false);
+        setselect('girl_shirts')
     }
     const handleOpenNavBar1 = () => {
-      set(!open);
-      setOpen(false);
-      f(false);
-      c(false);
-      fal(false);
-    //   setIsClick(false);
-      setselect('skin_cares')
+        set(!open);
+        setOpen(false);
+        f(false);
+        c(false);
+        fal(false);
+        //   setIsClick(false);
+        setselect('skin_cares')
     }
     const handleOpenNavBar2 = () => {
-      f(!t);
-      set(false);
-      setOpen(false);
-      c(false);
-      setselect('men_shirt')
-      fal(false);
-    //   setIsClick(false);
+        f(!t);
+        set(false);
+        setOpen(false);
+        c(false);
+        setselect('men_shirt')
+        fal(false);
+        //   setIsClick(false);
     }
     const handleOpenNavBar3 = () => {
-      c(!o);
-      set(false);
-      f(false);
-      setOpen(false); 
-      setselect('women_shirts')
-      fal(false);
-    //   setIsClick(false);
+        c(!o);
+        set(false);
+        f(false);
+        setOpen(false);
+        setselect('women_shirts')
+        fal(false);
+        //   setIsClick(false);
     }
     const handleOpenNavBar4 = () => {
-      fal(!tru);
-      set(false);
-      f(false);
-      setOpen(false);
-      setselect('boy_shirts')
-      c(false);
-    //   setIsClick(false);
+        fal(!tru);
+        set(false);
+        f(false);
+        setOpen(false);
+        setselect('boy_shirts')
+        c(false);
+        //   setIsClick(false);
     }
 
 
@@ -83,7 +84,7 @@ export default function Nav() {
 
     return (
         <div className={styles.header}>
-            <Link href='/home' className={styles.link}><img src='NTU.png' className={styles.nav}></img></Link>
+            <Link href='/home' className={styles.link}><Image src="/NTU.png" alt="Picture of the author" className={styles.nav} width={100} height={100}/></Link>
             <div className={styles.L}>
                 <div className={styles.nav_link}>
                     <Link href='/home' className={styles.link}>Home</Link>
@@ -96,12 +97,14 @@ export default function Nav() {
                     <Link href='/contact' className={styles.link}>Contacts</Link>
                 </div>
                 <div className={styles.nav_icon}>
-                    <Link href='/' ><FontAwesomeIcon icon={faUser} className={styles.User}></FontAwesomeIcon></Link>
+                    <Link href='/' ><Image src="/profile_defult.png" alt="Picture of the author" className={styles.User} width={25} height={25}/></Link>
                     <Link href='/cart'><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></Link>
                     <p className={styles.status}>{cart.length}</p>
-                        <button onClick={handleOpen} className={styles.button}>
-                            <FontAwesomeIcon icon={faBars} className={styles.menu}></FontAwesomeIcon>
-                        </button>
+                    <Link href='#'><FontAwesomeIcon icon={faBell} className={styles.icon}></FontAwesomeIcon></Link>
+                    <p className={styles.Status}>0</p>
+                    <button onClick={handleOpen} className={styles.button}>
+                        <FontAwesomeIcon icon={faBars} className={styles.menu}></FontAwesomeIcon>
+                    </button>
                 </div>
             </div>
             {
@@ -198,6 +201,9 @@ export default function Nav() {
                             </li>
                             <li>
                                 <Link href='/contact'>Contacts</Link>
+                            </li>
+                            <li>
+                                <Link href='/' ><FontAwesomeIcon icon={faUser} className={styles.user}></FontAwesomeIcon></Link>
                             </li>
                         </ul>
                     </div>
