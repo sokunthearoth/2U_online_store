@@ -8,10 +8,12 @@ import { ToastProvider } from 'react-toast-notifications';
 import { ProductContextProvider } from '../component/contexts/ProductContext'
 import { SelectContextProvider } from '../component/contexts/SelectContext'
 import { SearchContextProvider } from '../component/contexts/SearchContext'
+import { ViewContextProvider } from '../component/contexts/ViewContext'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <>
+    <ViewContextProvider>
       <FormContextProvider>
         <SearchContextProvider>
           <SelectContextProvider>
@@ -34,6 +36,7 @@ function MyApp({ Component, pageProps }) {
           </SelectContextProvider>
         </SearchContextProvider>
       </FormContextProvider>
+      </ViewContextProvider>
     </>
 
   )
