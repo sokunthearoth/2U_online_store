@@ -9,17 +9,27 @@
 }
 .Item{
     width: 100%;
-    padding: 0px 50px;
-    margin: 0px 50px;
+    padding: 0px 20px 0px 0px;
+    margin: 0px auto;
 }
-.items{
+
+.post{
     width: 100%;
-    padding: 0px 20px;
-    /* font-size: 15px; */
+    text-align: center;
+    /* background-color: rgb(189, 189, 235); */
 }
-.items th{
-    font-size: 14px;
-    margin: 10px 50px;
+.grid{
+    display: flex;
+    justify-items: center;
+    /* background-color: blue; */
+    width: 100%;
+    margin: 0px auto;
+}
+.drop{
+    text-align: center;
+    width: 385px;
+    display: inline;
+    margin: 50px;
 }
 .form{
     overflow: hidden;
@@ -27,7 +37,7 @@
 }
 .form label, .form input[type=text]{
     margin: 15px;
-    width: 250px;
+    width: 350px;
     border: none;
 }
 .L, .form input[type=color]{
@@ -63,7 +73,7 @@
     border: none;
     background-color: rgb(44, 44, 44);
 }
-
+/* 
 .lelf{
     padding: 0px 20px;
     width: 15%;
@@ -75,4 +85,4 @@
 .right{
     display: inline-block;
     width: 70%;
-}
+} */

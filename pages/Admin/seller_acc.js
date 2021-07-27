@@ -12,6 +12,7 @@ import Product_Page from './manage_product';
 import Order_Page from './manage_order';
 import Customer_Page from './manage_coustomer';
 import DashBoard from './dashboard';
+import Grid from '@material-ui/core/Grid';
 
 
 function TabPanel(props) {
@@ -51,22 +52,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
-        display: 'flex',
-        height: '100vh',
-        maxWidth: '1300px',
-        width: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        fontSize: '18px',
+        fontSize: '20px',
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
-        height: '100vh',
-        padding: '0px 0px 0px 50px',
-        textAlign: `left`,
-    },
-    label: {
-        padding: '0px 50px 0px 50px',
     },
 }));
 
@@ -88,47 +79,48 @@ const ProfileAccSeller = () => {
                 <p>Name</p>
             </div>
             <div className={classes.root}>
-                <div className={styles.left}>
-                    <Tabs
-                        orientation="vertical"
-                        variant="scrollable"
-                        value={value}
-                        onChange={handleChange}
-                        className={classes.tabs}
-                    >
-                        <Tab className={classes.label} label="Post Product" {...a11yProps(0)} />
-                        <Tab className={classes.label} label="Manage Product" {...a11yProps(1)} />
-                        <Tab className={classes.label} label="Manage Order" {...a11yProps(2)} />
-                        <Tab className={classes.label} label="Manage Customer" {...a11yProps(3)} />
-                        <Tab className={classes.label} label="Dashboard" {...a11yProps(4)} />
-                        <Tab className={classes.label} label="Logout" {...a11yProps(5)} />
+                <Grid container spacing={0} className={styles.grid}>
+                    <Grid item xs={12} sm={3}>
+                        <Tabs
+                            orientation="vertical"
+                            variant="scrollable"
+                            value={value}
+                            onChange={handleChange}
+                            className={classes.tabs}
+                        >
+                            <Tab className={classes.label} label="Post Product" {...a11yProps(0)} />
+                            <Tab className={classes.label} label="Manage Product" {...a11yProps(1)} />
+                            <Tab className={classes.label} label="Manage Order" {...a11yProps(2)} />
+                            <Tab className={classes.label} label="Manage Customer" {...a11yProps(3)} />
+                            <Tab className={classes.label} label="Dashboard" {...a11yProps(4)} />
+                            <Tab className={classes.label} label="Logout" {...a11yProps(5)} />
 
-                    </Tabs>
-                </div>
-
-                <div className={styles.right}>
-                    <TabPanel  value={value} index={0}>
-                        <Post_Page />
-                    </TabPanel>
-                    <TabPanel  value={value} index={1}>
-                        <Product_Page />
-                    </TabPanel>
-                    <TabPanel  value={value} index={2}>
-                        <Order_Page />
-                    </TabPanel>
-                    <TabPanel  value={value} index={3}>
-                        <Customer_Page  />
-                    </TabPanel>
-                    <TabPanel value={value} index={4}>
-                        <DashBoard />
-                    </TabPanel>
-                    <TabPanel value={value} index={5}>
-                        Item Six
-                    </TabPanel>
-                    <TabPanel value={value} index={6}>
-                        Item Seven
-                    </TabPanel>
-                </div>
+                        </Tabs>
+                    </Grid>
+                    <Grid item xs={12} sm={9}>
+                        <TabPanel value={value} index={0}>
+                            <Post_Page />
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <Product_Page />
+                        </TabPanel>
+                        <TabPanel value={value} index={2}>
+                            <Order_Page />
+                        </TabPanel>
+                        <TabPanel value={value} index={3}>
+                            <Customer_Page />
+                        </TabPanel>
+                        <TabPanel value={value} index={4}>
+                            <DashBoard />
+                        </TabPanel>
+                        <TabPanel value={value} index={5}>
+                            Item Six
+                        </TabPanel>
+                        <TabPanel value={value} index={6}>
+                            Item Seven
+                        </TabPanel>
+                    </Grid>
+                </Grid>
             </div>
 
 
