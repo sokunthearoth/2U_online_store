@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from '../../styles/seller_acc.module.css'
-
+import Image from 'next/image';
 
 const Product_Page = () => {
     const [productdata,setProductdata]=React.useState([])
@@ -27,6 +27,7 @@ const Product_Page = () => {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Category</th>
                         <th scope="col">Description</th>
@@ -42,6 +43,7 @@ const Product_Page = () => {
                     return(  
                     <tr>
                         <th scope="row">{product._id}</th>
+                        <td><img src={product.img_url} className={styles.Image}></img></td>
                         <td>{product.name}</td>
                         <td>{product.category}</td>
                         <td>{product.description}</td>
