@@ -7,11 +7,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Post_Page from './post_page'
-import Product_Page from './manage_product';
-import Order_Page from './manage_order';
-import Customer_Page from './manage_coustomer';
-import DashBoard from './dashboard';
+import Post_Page from '../../component/presentations/post_page'
+import Product_Page from '../../component/presentations/manage_product';
+import Order_Page from '../../component/presentations/manage_order';
+import Customer_Page from '../../component/presentations/manage_coustomer';
+import DashBoard from '../../component/presentations/dashboard';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -128,3 +128,4 @@ const ProfileAccSeller = () => {
     );
 }
 export default ProfileAccSeller;
+

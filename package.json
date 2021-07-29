@@ -21,7 +21,7 @@
     "next": "10.0.6",
     "react": "17.0.1",
     "react-awesome-slider": "^4.1.0",
-    "react-bootstrap": "^1.5.1",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "17.0.1",
     "react-hook-form": "^6.15.5",
     "react-multi-carousel": "^2.6.2",

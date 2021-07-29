@@ -1,11 +1,25 @@
 import React, { useContext } from "react";
 import styles from '../../styles/seller_acc.module.css'
 
-
-
-
 const Customer_Page = () => {
-    
+    const [userdata,setUserdata]=React.useState([])
+    React.useEffect(async()=>{
+        let unmounted=false;
+    await fetch('http://localhost:8000/api/users')
+    .then(res=>res.json())
+    .then((res)=>{
+        if (!unmounted) {
+        setUserdata(res);
+        console.log(res)
+        }
+    })
+    .catch((err)=>{
+        console.log(err)
+        return () => {
+            unmounted = false;
+        };
+    })
+},[])
 
     return (
         <div className={styles.items}>
@@ -22,24 +36,18 @@ const Customer_Page = () => {
                     </tr>
                 </thead>
                 <tbody>
+                {userdata.map((user,index) => {
+                    return(  
                     <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <th scope="row">{user._id}</th>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>{user.phone_number}</td>
+                        <td>{user.gender}</td>
                     </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                 )
+                    })
+                    }
                 </tbody>
             </table>
         </div>
