@@ -17,11 +17,21 @@ const shop = () => {
     console.log(cart.length);
   }
   const Order = () => {
-    addToast("Thank You! Your Order been placed", {
-      appearance: 'success',
-      autoDismiss: true,
+    fetch('http://localhost:8000/api/orders/', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "name":cart.name,
+        "price":cart.price,
+        "discount":cart.discount,
+        "img_url":cart.img_url, 
+      })
     })
-    setcart([]);
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((err) => {
+        console.error(err)
+      })
   }
   let Total = 0
   for (let i = 0; i < cart.length; i++) {

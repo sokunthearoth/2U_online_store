@@ -9,10 +9,18 @@ import { ProductContextProvider } from '../component/contexts/ProductContext'
 import { SelectContextProvider } from '../component/contexts/SelectContext'
 import { SearchContextProvider } from '../component/contexts/SearchContext'
 import { ViewContextProvider } from '../component/contexts/ViewContext'
+import { ProductIDContextProvider } from '../component/contexts/ProductIDContext'
+import { UpdateShowContextProvider } from '../component/contexts/UpdateShow'
+import { DeleteShowContextProvider } from '../component/contexts/DeleteShowContext'
+import { DeleteProductIDContextProvider } from '../component/contexts/DeleteProductIDContext'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <>
+    <DeleteProductIDContextProvider>
+    <DeleteShowContextProvider>
+    <UpdateShowContextProvider>
+    <ProductIDContextProvider>
     <ViewContextProvider>
       <FormContextProvider>
         <SearchContextProvider>
@@ -37,6 +45,10 @@ function MyApp({ Component, pageProps }) {
         </SearchContextProvider>
       </FormContextProvider>
       </ViewContextProvider>
+        </ProductIDContextProvider>
+        </UpdateShowContextProvider>
+        </DeleteShowContextProvider>
+        </DeleteProductIDContextProvider>
     </>
 
   )
