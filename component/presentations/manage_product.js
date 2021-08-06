@@ -43,7 +43,7 @@ const Product_Page = () => {
                     return(  
                     <tr>
                         <th scope="row">{product._id}</th>
-                        <td><img src={product.img_url} className={styles.Image}></img></td>
+                        <td><img src={product.img_url} className={styles.Image} width='50px'></img></td>
                         <td>{product.name}</td>
                         <td>{product.category}</td>
                         <td>{product.description}</td>
