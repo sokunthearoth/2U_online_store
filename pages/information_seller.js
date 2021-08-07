@@ -14,7 +14,7 @@ const Seller = () => {
     const [message,setMessage]=React.useState(``)
     const onSubmit = (data) => {
       setForm(data);
-      router.push('/seller_acc')
+      router.push('/Admin/seller_acc')
     }
     return (
         <div className={styles.container}>
