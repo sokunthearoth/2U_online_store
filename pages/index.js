@@ -43,6 +43,7 @@ fileRef.put(file)
                         "email": document.getElementById('email').value,
                         "phone_number": document.getElementById('phone_number').value,
                         "password":document.getElementById('password').value,
+                        "gender":document.getElementById('gender').value,
                         "img_url": res
                     })
                 })
@@ -101,6 +102,12 @@ fileRef.put(file)
             id="phone_number" 
             ref={register({required:true})}
           />
+            <label >Gender:</label>
+
+<select id="gender">
+  <option value="Men">Men</option>
+  <option value="Women">Women</option>
+</select>
         {errors.email && <span className={styles.error}>This field is required </span>}
           <input 
             name="password" 
