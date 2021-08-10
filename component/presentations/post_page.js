@@ -228,7 +228,7 @@ const Post_Page = () => {
                                 <MenuItem value={20}>Skincare</MenuItem>
                             </Select>
                         </Grid>
-                        <button><input type='file' id="Product-Image" multiple/></button>
+                        {/* <button><input type='file' id="Product-Image" multiple/></button> */}
                     </Grid>
 
                  {/* <Grid container spacing={1}>

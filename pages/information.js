@@ -19,14 +19,14 @@ const Information = () => {
                     <div  className={styles.link}>
                         <Link href='/information_seller'>
                             <img src="../for seller.png" />
-                            <p>For own Shop</p>
+                            <p>Admin</p>
                         </Link>
                     </div>
 
                     <div className={styles.link}>
                         <Link href='/login'>
                             <img src="../buyer.jpg" />
-                            <p>For Personal</p>
+                            <p>Coustomer</p>
                         </Link>
                     </div>
 

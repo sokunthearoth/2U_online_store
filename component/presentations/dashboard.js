@@ -1,7 +1,9 @@
-
+import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { useState, useEffect } from 'react'
 import { Bar, Line } from 'react-chartjs-2'
 import { PieChart } from 'react-minimal-pie-chart';
+import styles from '../../styles/seller_acc.module.css'
 
 
 
@@ -12,7 +14,7 @@ const DashBoard = () => {
     const [employeeAge, setEmployeeAge] = useState([]);
     const Chart = () => {
         setChartData({
-            labels: ['22/03', '23/03', '24/03', '25/03', '26/03', '27/03'],
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', ''],
             datasets: [{
                 label: '# of Votes',
                 data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -60,7 +62,7 @@ const DashBoard = () => {
         ]
     };
     return (
-        <div>
+        <div claseName={styles.dashboard}>
             {/* <PieChart
                 data={[
                     { title: 'One', value: 10, color: '#E38627' },
@@ -70,8 +72,22 @@ const DashBoard = () => {
             />; */}
 
             <div className="App">
-                <h1>Overview</h1>
-                <div>
+                <h2>Overview</h2>
+                <div className={styles.card}>
+                    <div className={styles.total}>
+                        <FontAwesomeIcon icon={faUserFriends} className={styles.icon}></FontAwesomeIcon>
+                        <p>Total Consumer</p>
+                        <p >0</p>
+                    </div>
+                    <div className={styles.new}>
+                        <FontAwesomeIcon icon={faUserFriends} className={styles.icon}></FontAwesomeIcon>
+                        <p>New Consumer</p>
+                        <p >0</p>
+                    </div>
+                </div>
+
+
+                <div className={styles.barchart}>
                     <Bar
                         data={chartData}
                         options={{
@@ -90,7 +106,7 @@ const DashBoard = () => {
                 </div>
             </div>
 
-            <div className="App">
+            <div className={styles.barchart}>
                 <Line data={data} />
             </div>
         </div>

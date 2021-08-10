@@ -77,4 +77,45 @@
     border: none;
     background-color: rgb(44, 44, 44);
 }
+.dashboard{
+    width: 100%;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.total{
+    display: inline-block;
+    background-color: cornflowerblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 25px;
+    margin: 30px 40px;
+    width: 35%;
+}
+
+.new{
+    display: inline-block;
+    background-color: rgb(233, 220, 101);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 25px;
+    margin: 30px 40px;
+    width: 35%;
+}
+
+.icon{
+    width: 50px;
+}
+
+.barchart{
+    width: 80%;
+    padding: 30px;
+    display: inline-block;
+}
 
