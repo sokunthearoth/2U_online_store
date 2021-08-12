@@ -5,6 +5,11 @@ import styles from '../../styles/seller_acc.module.css'
 
 
 const Order_Page = () => {
+    const [time,setTime]= React.useState('')
+    const [namedata,setNamedata]= React.useState('')
+    const [emaildata, setEmaildata]= React.useState('')
+    const [genderdata, setGenderdata]= React.useState('')
+    const [phone_number,setPhone_number]= React.useState('')
     const [orderdata,setOrderdata]=React.useState([])
     React.useEffect(async()=>{
         let unmounted=false;
@@ -12,7 +17,12 @@ const Order_Page = () => {
     .then(res=>res.json())
     .then((res)=>{
         if (!unmounted) {
-        setorderdata(res);
+        setEmaildata(res.email)
+        // setGenderdata(res.gender)
+        // setPhone_number(res.phone_number)
+        setNamedata(res.name)
+        setOrderdata(res.products);
+        // setTime(res.ordertime)
         console.log(res)
         }
     })
@@ -30,32 +40,50 @@ const Order_Page = () => {
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone Number</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Discount</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Product</th>
                         <th scope="col">Time</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                {orderdata.map((order,index) => {
-                    return(  
                     <tr>
-                        <th scope="row">{order._id}</th>
-                        <td><img src={order.img_url} className={styles.Image}></img></td>
-                        <td>{order.username}</td>
-                        <td>{order.email}</td>
-                        <td>{order.phone_number}</td>
-                        <td>{order.discount}</td>
-                        <td>{order.price}$</td>
-                        <td>{order.timecreated}</td>
+                        <th scope="row"></th>
+                        <td>{namedata}</td>
+                        {/* <td>{genderdata}</td>  */}
+                        <td>{emaildata}</td>
+                        {/* <td>{phone_number}</td>
+                        <td>{time}</td> */}
+                        {/* <td>{orderdata.map((order,index)=>{
+                            return(
+                                <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <tr scope="row"></tr>
+                                    <td>{order.name}</td>
+                                    <td>{order.price}</td>
+                                    <td>{order.description}</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            )
+                        })}</td> */}
                         
                     </tr>
-                 )
-                    })
-                    }
                 </tbody>
             </table>
         </div>

@@ -10,7 +10,7 @@ import Select from '@material-ui/core/Select';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import InputLabel from '@material-ui/core/InputLabel';
 import { fireStorage } from './../../services/firebase'
-
+import ReactLoading from 'react-loading';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Post_Page = () => {
 
+    const [loading , setLoading] = React.useState(false);
     const classes = useStyles();
     const [age, setAge] = React.useState('');
     const [open, setOpen] = React.useState(false);
@@ -69,6 +70,7 @@ const Post_Page = () => {
     //     setColor(e.target.value);
     // }
     const handlePost = (e) => {
+        setLoading(true)
         e.preventDefault();
         const file = document.getElementById("Product-Image").files[0]
         console.log(file)
@@ -92,7 +94,7 @@ const Post_Page = () => {
                             })
                         })
                             .then(response => response.json())
-                            .then(data => console.log(data))
+                            .then(data =>{ console.log(data) ,setLoading(false)})
                             .catch((err) => {
                                 console.error(err)
                             })
@@ -155,6 +157,7 @@ const Post_Page = () => {
     //     }
     return (
         <div className={styles.Item}>
+            {loading&&<ReactLoading type="balls" color="blue" height={'20%'} width={'20%'} className={styles.loading} />}
             {/* <h1>Post</h1> */}
 
             <form className={styles.form}>

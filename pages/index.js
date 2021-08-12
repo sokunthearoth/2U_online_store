@@ -55,7 +55,7 @@ fileRef.put(file)
                       setForm(data);
                       setLoading(false);
                       if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
-                        router.push('/information')
+                        router.push('/men')
                       } else {
                         setMessage(`Passwords don't match`);
                       }
