@@ -71,7 +71,7 @@ const Product_Page = () => {
                 {productdata.map((product,index) => {
                     return(  
                     <tr>
-                        <th scope="row">{product._id}</th>
+                        <th scope="row"></th>
                         <td><img src={product.img_url} className={styles.Image} width='50px'></img></td>
                         <td>{product.name}</td>
                         <td>{product.category}</td>

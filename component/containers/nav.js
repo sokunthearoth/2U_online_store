@@ -7,9 +7,11 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Router, useRouter } from 'next/router'
 import { SelectContext } from '../contexts/SelectContext'
 import Image from 'next/image'
+import { UserContext } from '../contexts/UserContext'
 
 
 export default function Nav() {
+    const { user, setUser } = useContext(UserContext)
     const { cart, setcart } = useContext(ProductContext)
     const router = useRouter();
     const { select, setselect } = useContext(SelectContext);
@@ -97,7 +99,7 @@ export default function Nav() {
                     <Link href='/contact' className={styles.link}>Contacts</Link>
                 </div>
                 <div className={styles.nav_icon}>
-                    <Link href='/' className={styles.User}><Image src="/profile_defult.png" alt="Picture of the author" className={styles.User} width={25} height={25}/></Link>
+                    <Link href='/' className={styles.User}>{user === "" ? (<img src="profile_defult.png" alt="user" className={styles.User}/>):(<img src={user.img_url} alt="user" className={styles.User}/>)}</Link>
                     <Link href='/cart'><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></Link>
                     <p className={styles.status}>{cart.length}</p>
                     <Link href='#'><FontAwesomeIcon icon={faBell} className={styles.icon}></FontAwesomeIcon></Link>

@@ -23,10 +23,11 @@ const Login = () => {
     return (
         <div className={styles.login}>
             <div className={styles.container}>
-                <img src="NTU.png" className={styles.logo} />
+                {/* <img src="NTU.png" className={styles.logo} /> */}
                 <div className={styles.modalcontent}>
-                    <p className={styles.li} >Login</p>
+                   
                     <form className={styles.form} action="/" method="GET" onSubmit = {handleSubmit(onSubmit)} >
+                        <p className={styles.li} >Login</p>
                         <input name="email" type="email" placeholder="Email" id="email" ref={register({required:true})}/><br></br>
                         {errors.email && <span className={styles.error}>This field is required</span>}
                         <input type="password" placeholder="Password" name="password" id="password" ref={register({required:true})}/><br></br>

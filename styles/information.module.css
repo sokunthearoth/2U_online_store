@@ -21,10 +21,14 @@
 }
 .choosing{
     background-color: white;
-    width: 70%;
-    margin-top: 90px;
-    border-radius: 10px;
-    margin-bottom: 25vh;
+    padding: 20px;
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 100vh;
 }
 .choosing h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

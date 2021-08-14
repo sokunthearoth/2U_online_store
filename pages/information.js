@@ -11,14 +11,14 @@ const Information = () => {
     const router = useRouter();
     return (
         <div className={styles.container}>
-            <img src="NTU.png" className={styles.logo} />
+            {/* <img src="NTU.png" className={styles.logo} /> */}
             <div className={styles.choosing}>
                 <h2>Create Account</h2>
                 <p>Welcome to TWO YOU</p>
                 <div className={styles.img}>
                     <div  className={styles.link}>
                         <Link href='/information_seller'>
-                            <img src="../for seller.png" />
+                            <img src="../for-seller.png" />
                             <p>Admin</p>
                         </Link>
                     </div>
