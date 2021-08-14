@@ -48,7 +48,7 @@ export default function Men({ userdata, productdata, menshirtsdata, menpantsdata
     }
     const addcart = (carts) => {
         setcart(cart.concat(carts));
-        console.log(cart);
+        console.log(cart.toString());
         addToast("Your order has been added to cart!", {
             appearance: 'success',
             autoDismiss: true,

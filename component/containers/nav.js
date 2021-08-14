@@ -99,7 +99,7 @@ export default function Nav() {
                     <Link href='/contact' className={styles.link}>Contacts</Link>
                 </div>
                 <div className={styles.nav_icon}>
-                    <Link href='/' className={styles.User}>{user === "" ? (<img src="profile_defult.png" alt="user" className={styles.User}/>):(<img src={user.img_url} alt="user" className={styles.User}/>)}</Link>
+                    <Link href='/' className={styles.User}>{user === ('') ? (<img src="/profile_defult.png" alt="user" className={styles.User}/>):(<img src={user.img_url} alt="user" className={styles.User}/>)}</Link>
                     <Link href='/cart'><FontAwesomeIcon icon={faShoppingBasket} className={styles.icon}></FontAwesomeIcon></Link>
                     <p className={styles.status}>{cart.length}</p>
                     <Link href='#'><FontAwesomeIcon icon={faBell} className={styles.icon}></FontAwesomeIcon></Link>

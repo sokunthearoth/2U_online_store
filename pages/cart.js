@@ -5,12 +5,14 @@ import ParallaxImage from '../component/presentations/parallax_image'
 import "react-multi-carousel/lib/styles.css";
 import Images from './../component/presentations/imageCarts'
 import { ProductContext } from './../component/contexts/ProductContext'
+import { UserContext } from './../component/contexts/UserContext'
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import styles from '../styles/cart.module.css'
 
 const shop = () => {
   const { addToast } = useToasts();
   const { cart, setcart } = useContext(ProductContext)
+  const { user, setUser } = useContext(UserContext)
   console.log(cart)
   const addcart = (carts) => {
     setcart(cart.concat(carts));
@@ -21,14 +23,15 @@ const shop = () => {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        "name":cart.name,
-        "price":cart.price,
-        "discount":cart.discount,
-        "img_url":cart.img_url, 
+        "products": cart,
+        "gender":user.gender,
+        "name":user.name,
+        "email":user.email,
+        "phone_number":user.phone_number
       })
     })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data =>{ console.log(data),console.log("after",cart)})
       .catch((err) => {
         console.error(err)
       })
