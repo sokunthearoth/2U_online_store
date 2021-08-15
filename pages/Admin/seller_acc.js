@@ -74,7 +74,7 @@ const ProfileAccSeller = () => {
     return (
         <div className={styles.selleradmin}>
             <div className={styles.Profile}>
-                <Image src="/profile_defult.png" alt="Picture of the author" width={100} height={100} />
+                <img src="/profile_defult.png" alt="Picture of the author" width={100} height={100} />
                 <br></br>
                 <p>Name</p>
             </div>

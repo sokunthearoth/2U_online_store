@@ -1,15 +1,18 @@
-
-
+.body body{
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+}
 .form{
   box-sizing: border-box;
   width: 100%;
+  padding: 20px;
 }
 .form input[type=text]{
     margin: 15px 0px;
     justify-content: center;
     padding: 10px 25px;
     width: 100%;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border: 1px solid grey;
+    border: none;
+    border-bottom: 1px solid grey;
 }
