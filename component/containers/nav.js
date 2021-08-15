@@ -6,7 +6,7 @@ import { ProductContext } from '../contexts/ProductContext'
 import React, { useState, useEffect, useContext } from 'react';
 import { Router, useRouter } from 'next/router'
 import { SelectContext } from '../contexts/SelectContext'
-import Image from 'next/image'
+import Image from 'next/image'  
 import { UserContext } from '../contexts/UserContext'
 
 
@@ -86,7 +86,7 @@ export default function Nav() {
 
     return (
         <div className={styles.header}>
-            <Link href='/home' className={styles.link}><Image src="/NTU.png" alt="Picture of the author" className={styles.nav} width={100} height={100}/></Link>
+            <Link href='/home' className={styles.link}><img src="/NTU.png" alt="Picture of the author" className={styles.nav} style={{width:'100px',height:'100px'}}/></Link>
             <div className={styles.L}>
                 <div className={styles.nav_link}>
                     <Link href='/home' className={styles.link}>Home</Link>

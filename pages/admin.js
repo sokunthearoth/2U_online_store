@@ -38,7 +38,7 @@ const [Url,setUrl]=useState('')
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(products)
     })
-      .then(response => response.json())
+      .then(response => {response.json()})
       .then(data => console.log(data))
       .catch((err) => {
         console.error(err)

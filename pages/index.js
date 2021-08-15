@@ -39,9 +39,9 @@ fileRef.put(file)
                     method: 'post',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        "name": document.getElementById('name').value,
-                        "email": document.getElementById('email').value,
-                        "phone_number": document.getElementById('phone_number').value,
+                        "name":document.getElementById('name').value,
+                        "email":document.getElementById('email').value,
+                        "phone_number":document.getElementById('phone_number').value,
                         "password":document.getElementById('password').value,
                         "gender":document.getElementById('gender').value,
                         "img_url": res
@@ -55,7 +55,7 @@ fileRef.put(file)
                       setForm(data);
                       setLoading(false);
                       if(document.getElementById('password').value === document.getElementById('confirm_password').value) {
-                        router.push('/men')
+                        router.push('/login')
                       } else {
                         setMessage(`Passwords don't match`);
                       }

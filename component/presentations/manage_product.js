@@ -34,7 +34,7 @@ const Product_Page = () => {
         }
       }
     React.useEffect(async()=>{
-        let unmounted=false;
+    let unmounted=false;
     await fetch('http://localhost:8000/api/products')
     .then(res=>res.json())
     .then((res)=>{
