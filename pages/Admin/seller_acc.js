@@ -13,6 +13,7 @@ import Order_Page from '../../component/presentations/manage_order';
 import Customer_Page from '../../component/presentations/manage_coustomer';
 import DashBoard from '../../component/presentations/dashboard';
 import Grid from '@material-ui/core/Grid';
+import Login from '../login'
 
 
 function TabPanel(props) {
@@ -93,7 +94,6 @@ const ProfileAccSeller = () => {
                             <Tab className={classes.label} label="Manage Order" {...a11yProps(2)} />
                             <Tab className={classes.label} label="Manage Customer" {...a11yProps(3)} />
                             <Tab className={classes.label} label="Dashboard" {...a11yProps(4)} />
-                            <Tab className={classes.label} label="Logout" {...a11yProps(5)} />
 
                         </Tabs>
                     </Grid>
@@ -112,9 +112,6 @@ const ProfileAccSeller = () => {
                         </TabPanel>
                         <TabPanel value={value} index={4}>
                             <DashBoard />
-                        </TabPanel>
-                        <TabPanel value={value} index={5}>
-                            Item Six
                         </TabPanel>
                         <TabPanel value={value} index={6}>
                             Item Seven
