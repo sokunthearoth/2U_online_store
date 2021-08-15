@@ -56,7 +56,7 @@
     background-color: red;
     color: white;
     top: 20px;
-    right: 125px;
+    right: 105px;
 }
 .Status{
     position: absolute;
@@ -68,7 +68,7 @@
     background-color: red;
     color: white;
     top: 20px;
-    right: 55px;
+    right: 40px;
 }
 /* .status, .Status{
     display: flex;
